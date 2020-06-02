@@ -1,0 +1,1 @@
+Main-Class: notepad0.Notepad

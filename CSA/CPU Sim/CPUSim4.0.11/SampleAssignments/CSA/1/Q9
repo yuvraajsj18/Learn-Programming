@@ -1,0 +1,21 @@
+; INC, SPA, SNA, SZE
+
+start:          INP
+pos:            SPA
+                BUN neg
+                LDA p
+                OUT
+neg:            SNA
+                BUN zero
+                LDA n
+                OUT
+zero:           SZE
+                BUN non_zero
+                LDA p
+                OUT
+                BUN end
+non_zero:       LDA n
+                OUT
+end:            HLT
+p:              .data 1 0
+n:              .data 1 1

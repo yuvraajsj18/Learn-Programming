@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="geekseditor">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/programs/notepad/geekseditor.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

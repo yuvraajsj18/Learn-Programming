@@ -1,0 +1,13 @@
+; Assembly program for - AND, OR, NOT, XOR, NOR, NAND for two inputs
+
+start:          
+and:            INP
+                STA a
+                INP
+                STA b
+                AND a
+                OUT     
+                HLT   
+
+a:              .data 1 0
+b:              .data 1 0

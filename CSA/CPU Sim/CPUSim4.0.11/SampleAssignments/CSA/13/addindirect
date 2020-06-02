@@ -1,0 +1,11 @@
+; Program to add two numbers
+
+start:  LDA 0 a
+        LDA 1 b
+        ADD 0 a   ; add a to b that is in ac
+        STA 0 sum ; store sum in sum
+        OUT     ; sum of a and b is in ac output it
+        HLT     ; end the program
+a:      .data 1 0x0001
+b:      .data 1 0x082
+sum:    .data 1 0

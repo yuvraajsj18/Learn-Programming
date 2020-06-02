@@ -1,0 +1,26 @@
+; multiply two number a and b --> add a b times that is add
+; a till b becomes zero by decrementing by -1 
+
+start:          INP             ; input first number
+                STA a           ; store first number in memory
+                INP             ; input second number
+                STA b           ; store second number in memory
+check:          LDA b           ; load b in AC to check its value
+                SZA             ; see if b is 0 or not
+                BUN multiply    ; if b is not zero then jump to multiply
+                LDA prod        ; else load product in AC
+                OUT             ; output AC
+                HLT             ; END
+multiply:       CLA             ; clear AC to 0    
+                INC             ; INC AC to 1
+                CMA             ; 1's comp of 1
+                INC             ; 2's comp of 1 = -1
+                ADD b           ; decrement b by -1
+                STA b           ; update b in memory
+                LDA a           ; Load a to ac
+                ADD prod        ; add a to prod
+                STA prod        ; update prod in memory
+                BUN check       ; return to check
+a:              .data 1 0
+b:              .data 1 0
+prod:           .data 1 0

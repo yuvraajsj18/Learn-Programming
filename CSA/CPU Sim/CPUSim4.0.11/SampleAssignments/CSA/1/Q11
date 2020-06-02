@@ -1,0 +1,14 @@
+; Add number untill -ve is entered
+
+start:          INP
+                STA a
+                SNA
+                BUN add_fn
+                LDA sum
+                OUT
+                HLT
+add_fn:         ADD sum
+                STA sum
+                BUN start
+a:              .data 1 0
+sum:            .data 1 0

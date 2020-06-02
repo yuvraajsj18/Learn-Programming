@@ -1,0 +1,10 @@
+start:      LDA 0 num1      ; 632 is operand; load it in ac
+            STA 0 0x082     ; store operand at location 082
+            LDA 0 num2      ; Load 937 in AC
+            ADD 0 0x082     ; Add 632 to ac
+            STA 0 num3      ; store result at location designated by add num3
+            OUT
+            HLT
+num1:       .data 1 0x632
+num2:       .data 1 0x937
+num3:       .data 1 0

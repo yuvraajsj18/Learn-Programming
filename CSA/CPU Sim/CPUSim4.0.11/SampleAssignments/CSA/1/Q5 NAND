@@ -1,0 +1,14 @@
+; NAND
+
+start:          
+and:            INP
+                STA a
+                INP
+                STA b
+                AND a
+                CMA
+                OUT     
+                HLT   
+
+a:              .data 1 0
+b:              .data 1 0

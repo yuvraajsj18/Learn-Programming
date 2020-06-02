@@ -1,0 +1,11 @@
+; CLA, CMA, CME, HLT
+
+start:          INP
+                OUT
+                CLA
+                OUT
+                CMA
+                OUT
+                CME
+                OUT
+                HLT

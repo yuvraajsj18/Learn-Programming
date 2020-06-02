@@ -1,0 +1,21 @@
+; use ADD, STA, LDA, BUN, ISZ
+
+start:          INP
+                STA a
+                INP
+                STA b
+                BUN add_fn
+add:            LDA sum
+                OUT
+                ISZ sum
+                OUT
+                LDA sum
+                OUT
+                HLT
+add_fn:         ADD a
+                STA sum
+                BUN add
+
+a:              .data 1 0
+b:              .data 1 0
+sum:            .data 1 0

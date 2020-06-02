@@ -1,0 +1,15 @@
+; Subtract second number from frist number
+
+start:  INP             ; input first number
+        STA a           ; store first number
+        INP             ; input second number
+        CMA             ; 1's complement of second number in AC
+        INC             ; 2's complement of second number in AC
+        STA b           ; storing 2's comp of second number in memory
+        ADD a           ; add 2's comp of second to first thus subtracting
+        STA diff        ; store the difference (optional)
+        OUT             ; Output the value in AC that is the difference
+        HLT             ; END
+a:      .data 1 0
+b:      .data 1 0
+diff:   .data 1 0

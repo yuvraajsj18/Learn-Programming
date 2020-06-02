@@ -1,0 +1,14 @@
+; PROGRAM TO ADD TWO NUMBERS
+
+start:          INP
+                STA a 0
+                INP
+                STA b 0
+                ADD a 0
+                STA sum 0
+                OUT
+                HLT
+
+a:              .data 1 0
+b:              .data 1 0
+sum:            .data 1 0
