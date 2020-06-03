@@ -1,6 +1,7 @@
 ---
 layout: default
 title: pythonref.md
+permalink: /python/ref/
 ---
 
 # Python
