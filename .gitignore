@@ -36,8 +36,11 @@
 ehthumbs.db
 Thumbs.db
 
-// folders that are not needed like colleges
+# folders that are not needed like colleges
 college/
 cpusim/
 books/
 
+# vs code files
+*.code-workspace
+.vscode
