@@ -5,6 +5,7 @@
 <details> <summary> Basics - Syntax, Variables, Input, Comments, Indentation </summary>
 
 ### Introduction
+
   1. Installation
 
   2. Interpreter
@@ -21,6 +22,7 @@
       - `python scriptname.py`
 
 ### Types And Syntax
+
   1. Command Line Arguments:
       - `import sys`
       - use args through `sys.argv[index]`
@@ -42,6 +44,7 @@
               - `1 + " = One"` will give you *value error*.
 
 ### Variables
+
   0. stores address of values in memory, prevents repetition
 
   1. Assigning - `number = 8`
@@ -58,17 +61,19 @@
       - `x = 8` ... `x = "str"` is OK
 
   6. In python varaibles are not deeply linked mean
+
       ```python
             x = 1
             y = x
             x = 2
             print(x, y)  # will print 2 1
       ```
+
       ![illustration of variables in memory](https://cdn.filestackcontent.com/mNqKMXUXRYuOmvgdSr4Z)
 
   7. Mupltiple assignment:
       - `a, b, c = 1, 2, 3` will assign a = 1, b = 2, c = 3
-          - errors:   
+          - errors:
               - `a, b = 1, 2` - not enough values to unpack
               - `a, b, c = 1, 2, 3, 4` - too many values to unpack
       - notice the comma between vars and values
@@ -114,12 +119,14 @@
   
   3. code should be self explainotary, identifier should be named in way that there is no confusion on *what it is or what it do*.
 
-  4. #### Comments in Python
-      * docstring
+  4. **Comments in Python**
+
+      - docstring
           - A docstring is a Documentation string is a literal string used as a python comment.
           - wrapped in """ or \`\`\`
           - Docstrings are often used to document modules, functions, and class definitions.
           - should be put at Beginning of file
+
           ```python
           """
           This script can be called with two integer arguments to return their sum
@@ -129,14 +136,17 @@
           num_2  = int(sys.argv[2])
           print(num_1, "+", num_2, "=", num_1 + num_2)
           ```
+
           - **use to write multiline comment**
-      * block
+      - block
           - starts with #, comes in line before the statement it annotes
+
             ```python
             # increament counter
             counter = counter + 1
             ```
-      * inline
+
+      - inline
           - starts with #, placed on the same line as the statement it annotes
           - `age = input("Age: ") # to avoid doing it later`
 
@@ -151,6 +161,7 @@
   4. **Whitespace** : Whitespace is any character in a piece of text that occupies space but doesn't correspond to a visible marking.
   
   5. Example:
+
       ```python
       if True:
           # execute this block of statements
@@ -159,6 +170,7 @@
           # execute other block of statements
           print("Block 2")
       ```
+
   6. **Notice:** Parent statement of a block, that is, the statement that comes just before indentation is suffixed with a **colon :**.
   
   7. Number of spaces in indentation does not matter unless it is consistent throughout the code, but the standard is *four spaces*.
@@ -166,6 +178,11 @@
 
 </details>
 
-
-
 ---
+
+### Data Types in Python
+
+  1. Data types classify data, **define different operations** that can be performed on the data and **how the data is stored** and the **meaning of the data**.
+
+  2. **Numerical Data**
+      1. Integers:
