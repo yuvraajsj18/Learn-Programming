@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Index.md
+title: index.md
 ---
 
 [Python Ref](/py/Materials/notes/pythonref.md)
