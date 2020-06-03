@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: pythonref.md
-permalink: /python/ref/
+permalink: docs/python/ref/
 ---
 
 # Python

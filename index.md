@@ -3,4 +3,4 @@ layout: default
 title: index.md
 ---
 
-[Python Ref](/python/ref/)
+[Python Ref](docs/python/ref/)
