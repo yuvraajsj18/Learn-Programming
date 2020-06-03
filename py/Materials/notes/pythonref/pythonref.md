@@ -12,7 +12,7 @@
 
   3. Shell
 
-  4. Writing scritp
+  4. Writing script
       - a python file is called a module
       - a module that can be run is called a script
 
@@ -58,7 +58,7 @@
   4. A namespace is a mapping of names/variables to their values
   
   5. variables in python are like labels. You can label any type with any label at any time.
-      
+     
 - `x = 8` ... `x = "str"` is OK
       
   6. In python variables are not deeply linked mean
@@ -175,7 +175,7 @@
   6. **Notice:** Parent statement of a block, that is, the statement that comes just before indentation is suffixed with a **colon :**.
   
   7. Number of spaces in indentation does not matter unless it is consistent throughout the code, but the standard is *four spaces*.
-      
+     
       - `IndentationError: unindent does not match any outer indentation level`
 
 </details>
@@ -188,14 +188,15 @@
 
   2. **Types of data**
       1. **_Numerical Data_**
-          
+
           1. Integers
               - Whole Numbers (positive or negative)
           - have unlimited precision unlike C/C++, Java. (Limited only by available memory).
-          
+
               ```python
               large_integer = 34567898327463893216847532149022563647754228543901666214555336432788998
               print(large_integer)
+              ```
           ```
           
           2. Floating Point Numbers
@@ -212,39 +213,88 @@
               - Octal - prefix with 0o
               (In C/C++, Java we just prefix it with 0).
           - **To convert between number system** use bin(), hex(), oct() functions.
-          
-      4. Python also supports complex number.
-          
-      2. Operators
+          ```
 
-          1. **Arithmetic operator**
+          - Python also supports complex number
 
-              1. Arithmetic operators are mathematical functions that take numerical values and perform calculations on them.
+      2. [**Strings**](#Strings)
 
-              2. ![All arithmetic operator in python](https://cdn.filestackcontent.com/k7Ctzmr2Re6PYoMWpbKt)
+### Operators
 
-              3. You can apply these operators on any number system operands.
+1. **Arithmetic operator**
 
-              4. Unlike C/C++ and Java, division in Python will always yield a floating point number regardless of data type.
+    1. Arithmetic operators are mathematical functions that take numerical values and perform calculations on them.
 
-              5. Example
+    2. ![All arithmetic operator in python](/mnt/DC84407A844058E2/CS/learning_cs/py/Materials/notes/pythonref/pythonref.assets/k7Ctzmr2Re6PYoMWpbKt)
 
-                  ```python
-                  13 / 2 == 6.5 # notice full division
-                  12 / 3 == 4.0 # not 4(int) but 4.0 (float)
-                  5 % 2 == 1
-                  13 // 2 == 6 # notice result is int
-                  5 ** 3 == 125
-                  ```
+    3. You can apply these operators on any number system operands.
 
-          2. **Assignment Operator**
+    4. Unlike C/C++ and Java, division in Python will always yield a floating point number regardless of data type.
 
-              1. = is used an assignment operator to assign a value to a variable.
+    5. Example
 
-              2. These are *shorthand* versions of assignment operator -
+        ```python
+        13 / 2 == 6.5 # notice full division
+        12 / 3 == 4.0 # not 4(int) but 4.0 (float)
+        5 % 2 == 1
+        13 // 2 == 6 # notice result is int
+        5 ** 3 == 125
+        ```
 
-                  ![Shorthand operators table](https://cdn.filestackcontent.com/m7DgCqLZRnm7N51fMYDZ)
+2. **Assignment Operator**
 
-              3. Arithmetic operators in Python follow the standard order of operations in mathematics: PEMDAS.
+    1. *=* is used an assignment operator to assign a value to a variable.
 
-          3. 
+    2. These are *shorthand* versions of assignment operator -
+
+        ![Shorthand operators table](/mnt/DC84407A844058E2/CS/learning_cs/py/Materials/notes/pythonref/pythonref.assets/m7DgCqLZRnm7N51fMYDZ)
+
+    3. Arithmetic operators in Python follow the standard order of operations in mathematics: PEMDAS.
+
+
+### Strings
+
+ 1. Strings are a sequence of character.
+
+    `s = "String"`
+
+ 2. Can be enclosed in either single (' ') or double (" ")  quotes. (In C/C++, Java strings must be in double quotes " ", and single characters in single quotes ' ').
+
+    `s = "string" is same as s = 'string'`
+
+ 3. A double quoted string can contain single quote and vice versa.
+
+    `s = "this 'is' a string" and s1 = 'this is "a" string'`
+
+ 4. For creating multiline string - enclose your string in ``` or """.
+
+    ```python
+    multiline = """A Multiline
+    				string"""
+    ```
+
+	5. **\* on strings**: will repeat the string that many times.
+
+    `"Hi!" * 3 # this is equal to Hi!Hi!Hi!`
+
+	6. **\+ operator on string** : will concatenate strings without adding spaces in between.
+
+    `"I " + "Love " + "Python" == "I Love Python"
+
+	7. *Python strings are **immutable***: This means that once they are assigned to a variable, their value cannot be changed.
+
+    - No operation string will change it unless you reassign the variable.
+
+      ```python
+      string = "Hello"
+      print(string) # Hello	| 	Initially
+      print(string * 2) # HelloHello	| Operation
+      print(string) # Hello	| No Change
+      string = "Bye"	# | No Change But Reassigned 
+      print(string) # Bye
+      ```
+
+	8. Python **strings are indexed** starting with 0
+
+    - ![Indexing photo](/mnt/DC84407A844058E2/CS/learning_cs/py/Materials/notes/pythonref/pythonref.assets/IqcyB8ULQTVq4I1h6WnB)
+
