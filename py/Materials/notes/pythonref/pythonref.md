@@ -70,7 +70,7 @@
             print(x, y)  # will print 2 1
       ```
 
-      ![illustration of variables in memory](https://cdn.filestackcontent.com/mNqKMXUXRYuOmvgdSr4Z)
+      ![illustration of variables in memory](./pythonref.assets/mNqKMXUXRYuOmvgdSr4Z)
 
   7. Mupltiple assignment:
       - `a, b, c = 1, 2, 3` will assign a = 1, b = 2, c = 3
@@ -225,7 +225,7 @@
 
     1. Arithmetic operators are mathematical functions that take numerical values and perform calculations on them.
 
-    2. ![All arithmetic operator in python](/mnt/DC84407A844058E2/CS/learning_cs/py/Materials/notes/pythonref/pythonref.assets/k7Ctzmr2Re6PYoMWpbKt)
+    2. ![All arithmetic operator in python](./pythonref.assets/k7Ctzmr2Re6PYoMWpbKt)
 
     3. You can apply these operators on any number system operands.
 
@@ -247,7 +247,7 @@
 
     2. These are *shorthand* versions of assignment operator -
 
-        ![Shorthand operators table](/mnt/DC84407A844058E2/CS/learning_cs/py/Materials/notes/pythonref/pythonref.assets/m7DgCqLZRnm7N51fMYDZ)
+        ![Shorthand operators table](./pythonref.assets/m7DgCqLZRnm7N51fMYDZ)
 
     3. Arithmetic operators in Python follow the standard order of operations in mathematics: PEMDAS.
 
@@ -296,5 +296,5 @@
 
 	8. Python **strings are indexed** starting with 0
 
-    - ![Indexing photo](/py/Materials/notes/pythonref/pythonref.assets/IqcyB8ULQTVq4I1h6WnB)
+    - ![Indexing photo](./pythonref.assets/IqcyB8ULQTVq4I1h6WnB)
 
