@@ -1,3 +1,8 @@
+---
+layout: default
+title: pythonref.md
+---
+
 # Python
 
 ## Beginning with Python
