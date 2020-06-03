@@ -1,9 +1,0 @@
-; NOT
-
-start:          INP
-                STA a
-                CMA
-                OUT   
-                HLT                
-
-a:              .data 1 0

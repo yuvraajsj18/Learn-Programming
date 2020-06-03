@@ -1,9 +1,0 @@
-CLA
-INC
-CMA
-INC
-OUT
-STA A
-HLT
-
-A: .data 1 0
