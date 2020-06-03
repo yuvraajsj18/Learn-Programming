@@ -296,5 +296,5 @@
 
 	8. Python **strings are indexed** starting with 0
 
-    - ![Indexing photo](/mnt/DC84407A844058E2/CS/learning_cs/py/Materials/notes/pythonref/pythonref.assets/IqcyB8ULQTVq4I1h6WnB)
+    - ![Indexing photo](/py/Materials/notes/pythonref/pythonref.assets/IqcyB8ULQTVq4I1h6WnB)
 
