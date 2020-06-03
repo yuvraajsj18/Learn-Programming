@@ -273,28 +273,71 @@
     				string"""
     ```
 
-	5. **\* on strings**: will repeat the string that many times.
+5. **\* on strings**: will repeat the string that many times.
 
-    `"Hi!" * 3 # this is equal to Hi!Hi!Hi!`
+   `"Hi!" * 3 # this is equal to Hi!Hi!Hi!`
 
-	6. **\+ operator on string** : will concatenate strings without adding spaces in between.
+6. **\+ operator on string** : will concatenate strings without adding spaces in between.
 
-    `"I " + "Love " + "Python" == "I Love Python"
+   `"I " + "Love " + "Python" == "I Love Python"
 
-	7. *Python strings are **immutable***: This means that once they are assigned to a variable, their value cannot be changed.
+7. *Python strings are **immutable***: This means that once they are assigned to a variable, their value cannot be changed.
 
-    - No operation string will change it unless you reassign the variable.
+   - No operation string will change it unless you reassign the variable.
+
+     ```python
+     string = "Hello"
+     print(string) # Hello	| 	Initially
+     print(string * 2) # HelloHello	| Operation
+     print(string) # Hello	| No Change
+     string = "Bye"	# | No Change But Reassigned 
+     print(string) # Bye
+     ```
+
+8. Python **strings are indexed** starting with 0
+
+   - ![Indexing photo](./pythonref.assets/IqcyB8ULQTVq4I1h6WnB)	
+
+   - to get a character from string - use []
+
+     `print(string[0]) # P`
+
+     - If we try to get a character from an index that doesn't exist, Python will raise an **IndexError**.
+
+       ```python
+       s = "foobar"
+       print(s[100]) # IndexError: string index out of range
+       print(s[1]) # o
+       "012345"[5] # 5
+       ```
+
+ 9. **Slicing strings**: to get a substring from a string
+
+    - format: `string[start_index : end_index]`
+
+    - The substring returned will not contain the character at last index but all the character upto the last index.
+
+    - Python allows you to *omit the start or end index*
 
       ```python
-      string = "Hello"
-      print(string) # Hello	| 	Initially
-      print(string * 2) # HelloHello	| Operation
-      print(string) # Hello	| No Change
-      string = "Bye"	# | No Change But Reassigned 
-      print(string) # Bye
+      string = "foobarbaz"
+      print(string[0 : 3]) # foo
+      print(string[-3 : -1]) # ba
+      print(string[2:]) # obarbaz	# start to last char
+      print(string[:3]) # foo
+      print(-n:m) # n and m are any index will return '' and viceversa
+      print(:30) #foobarbaz
+      print(30:30) # ""
       ```
 
-	8. Python **strings are indexed** starting with 0
+ 10. **Length** of a String: Number of characters inside it.
 
-    - ![Indexing photo](./pythonref.assets/IqcyB8ULQTVq4I1h6WnB)
+     - to calculate length of string use built-in len() function
 
+       `len("String") # gives 6`
+
+     - len("") # empty string gives 0
+
+ 11. String Formatting - to build new string using existing values
+
+     - 
