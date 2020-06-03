@@ -1,3 +1,9 @@
+---
+layout: page
+title: pythonref.md
+permalink: /python/ref/
+---
+
 # Python
 
 ## Beginning with Python

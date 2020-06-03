@@ -40,7 +40,3 @@ Thumbs.db
 college/
 cpusim/
 books/
-
-# vs code files
-*.code-workspace
-.vscode
