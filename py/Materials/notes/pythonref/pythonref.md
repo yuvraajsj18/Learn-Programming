@@ -338,6 +338,191 @@
 
      - len("") # empty string gives 0
 
- 11. String Formatting - to build new string using existing values
+ 11. String Formatting - to build new string using existing values.
 
-     - 
+     - **String Interpolation** :
+     
+       - String interpolation is the process of evaluating a string that has placeholders. 
+     
+       - These placeholders can hold expressions that yield a value, which is then placed inside the string. 
+     
+       - Special kinds of strings, known as **f-strings** (**formatted strings**), are used during string interpolation.
+     
+       - These strings are prefixed with an `f` to denote how they're meant to be interpreted
+     
+         ```python
+         value = 3
+         string = f"value is {value} and value times 2 is {value * 2}"
+         # notice the curly brace used for inserting varibles and expressions
+         # {} cannot be empty
+         ```
+     
+       - *If you omit the `f` prefix, the string will be interpreted literally, as-is.*
+     
+       - **This should be the de facto way to format strings when using Python 3.6+.**
+     
+     - **The str.format() Method**
+     
+       - The `format()` method can be found on every string instance. 
+     
+       - It allows you to insert different values in positions within the string
+     
+       - you can't put expressions into the placeholders.
+     
+         ```python
+         var = "Var"
+         string = "{} is var".format(var)
+         print(string)
+         str = "{} is {}"
+         dog = "Dog"
+         animal = "Animal"
+         str.format(dog, animal)
+         ```
+     
+ 12. String Methods
+
+      1. **str.capitalize()** : returns *copy* str with 1st letter capitalized and rest in lowercase
+
+      2. **str.lower()** : returns *copy* of str with all characters in lowecase.
+
+      3. **str.upper()** : returns copy of the string with all characters in uppercase.
+
+      4. **str.startswith(prefixStr)** : return bool by checking if a string starts with a given prefix.
+
+      5.  **str.endswith(suffixStr)** :returns bool by  checking if a string ends with the given suffix.
+
+      6. **str.strip()** : The `str.strip()` method returns a copy of the string with the leading and trailing characters removed. 
+
+         - The method also takes an argument that is a string, specifying the set of characters to be removed. 
+         - This method is also case-sensitive. 
+         - If no arguments are passed to it, it removes all of the trailing and leading whitespaces.
+           - This can be useful when sanitizing data:
+
+         ```python
+         str = "123DATA321"
+         str.strip("123")	# DATA
+         str.strip("DATA")	# 123DATA321 Why? because no D,A,T on the ends
+         str.strip("1")	# 23DATA32
+         str = "1DATA2"	
+         str.strip("1")	# DATA2
+         str.strip('2')	# 1DATA
+         str.strip('A2')	# 1DAT
+         str = "    AAAA    "	
+         str.strip()		# AAAA
+         ```
+
+      7. **str.replace()** : The `str.replace()` method takes two substrings as arguments (old and new), then returns a copy of the string with **all of the occurrences** of the old substring replaced with the new one. 
+
+         - Note that the method is case-sensitive
+
+           ```python
+           str = "OneTwoThree"
+           str.replace("Two", "2") # One2Three
+           str.replace("Three", "Tree") # OneTwoTree
+           ```
+
+      8. str.count(substr) : to count the number occurance in the string of sub string.
+
+      9. _**You don't have to remember any method, because you can always look them up in the documentation.**_
+
+         - to see documentation in the interpreter do - `help(str)`. make sure that str is not a variable assigned at the time of doing this otherwise the interpreter will interpret 'str' as a variable instead of the in-built class 'str'.
+
+      10. [Read through the Python documentation for more information on string methods.](https://docs.python.org/2.4/lib/string-methods.html)
+
+### Lists (Basics)
+
+ 1. Lists are the closest form of arrays in Python.
+
+ 2. List are aggregate data type, meaning that they are composed of other data types.
+
+ 3. Values in list are indexed from 0.
+
+ 4. Lists have a length property (len() function) and a count of objects inside it.
+
+ 5. List in python are heterogeneous, so they can hold values of different data types. In contrast to arrays in other languages like C/C++, Java where arrays only hold one data type elements.
+
+ 6. Lists are **mutable**, you can change the values inside of them, add elements and remove them.
+
+ 7. **List can contain other list inside them**.
+
+ 8. Lists are made with comma-separated elements enclosed in square brackets.
+
+    ```python
+    digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    letters = ['a', 'b', 'c', 'd']
+    mixed = [0, 'a', 1, 'b', 2, 'c']
+    biglist = ['a', 'b', [0, 1, 2]]
+    bigbiglist = ["String", biglist]
+    len(bigbiglist) # return number of elements in the list - 2 in this case
+    ```
+
+	9. **Indexing in list**
+
+    - Indexing starts with 0.
+
+    - Index can also be negative meaning get the element from the end of the list
+
+      ```python
+      digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      digits[0] # 0
+      digits[5] # 5
+      digits[-5] # 5
+      digits[4] # 4
+      digits[-4] # 6
+      ```
+
+	10. **Slicing in list**
+
+     - You can slice a list that is get a sub list from the list using - `list[start_index : end_index]`, end_index element is not included in the sub list.
+
+     - **The original list remains unchanged by slicing operation**.
+
+       ```python
+       digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+       few_digits = digits[2 : 5]
+       print(few_digits) # [2, 3, 4]
+       print(digits) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+       print(digits[4: ]) # [4, 5, 6, 7, 8, 9]
+       print(digits[ : 4]) # [0, 1, 2, 3]
+       ```
+
+	11. **Adding two lists**
+
+     - You can add two lists together by using the `+` operator. The elements of all of the lists being concatenated are brought together inside one list.
+
+       - Elements will be repeated.
+
+       ```python
+       list1 = [0, 'a', "string"]
+       list2 = ["string", 1, 'b']
+       list3 = list1 + list2
+       print(list3) # [0, 'a', 'string', 'string', 1, 'b']
+       list4 = list1 + list2 + list3
+       print(list4) # [0, 'a', "string", "string", 1, 'b', 0, 'a', 'string', 'string', 1, 'b']
+       ```
+
+	12. **Changing Values in a list** 
+
+     - As lists are mutable, there content can be changed.
+
+     - You can change value through its index like `digits[5] = 10`.
+
+     - You can also use list.append() function to insert a value at the end of a list.
+
+       `digits.append(11)`
+
+     - You can also assign slices of a list, this **replaces ** the target slice with whatever you assign, regardless of the initial size of the list.
+
+       `digits[2 : 8] = ["deleted"]` 	# [0, 1, 'deleted', 8, 9]
+
+     - **An important thing to note is that when you assign a list, it points it to an object in the memory. If you assign another variable to the variable that references that list, the new variable also references that same list object in the memory. Any changes made using either reference will always change the same list object in the memory.**
+
+       ```python
+       list1 = [0, 1, 2, 3, 4, 5] # list 1 points to an object in memory that is this list [0, 1, 2, 3, 4, 5]
+       list2 = list1 # list2 will also points to the same object
+       list2[0] = 100 # this is equavalent to list1[0] = 100
+       				# as both point to the same list in memory
+       print(list1, list2) # both will change
+       ```
+
+       
