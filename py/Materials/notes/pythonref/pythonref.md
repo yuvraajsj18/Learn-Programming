@@ -8,18 +8,36 @@
 
   1. Installation
 
-  2. Interpreter
+      - [Download Python](https://www.python.org/downloads/)
 
-  3. Shell
+  2. Writing script
+      - a python file is called a **module**.
+      - a module that can be run is called a **script**.
 
-  4. Writing script
-      - a python file is called a module
-      - a module that can be run is called a script
+  3. Creating a script
 
-  5. Creating a script
-  
-  6. Running a script
-      - `python scriptname.py`
+      - Write this line in a file called `hello.py`
+
+        ```python
+        print("Hello, World!")
+        ```
+
+        - This is it, that's our `Hello, World` program in python. Just one line.
+
+  4. Running a script
+
+      - To run a python script, execute the following command in the terminal -
+
+        `python scriptname.py`
+
+        - For our hello.py, it will be - `python hello.py`.
+
+  5. Interpreter
+
+      - Python provides an interpreter to quickly run instruction of Python.
+      - To start the interpreter, just type `python` in your terminal.
+      - Then you can run any Python instruction without creating files.
+      - This is useful for quickly checking code snippets or test something.
 
 ### Types And Syntax
 
@@ -682,5 +700,190 @@
 
 ---
 
+### Control Structures
 
+1. **Program flow** describes the way in which statements in code are executed. 
 
+2. Python uses a simple top-down program flow. (code is executed in sequence from the top of the file to the very bottom.)
+
+3. A control statement is a structure in code that conditionally changes the program flow.
+
+   - A control statement achieves this by conditionally executing different parts of code. 
+   - A control statement can also be used to repeatedly and conditionally execute some code.
+
+4. The two main control statements in Python are:
+
+   - **`if`**
+   - **`while`**
+
+5. #### The if statement
+
+   - An `if` statement allows you to execute a block of code if a condition is true. Otherwise, it can run an alternative block of code in its `else` clause.
+
+   - The `else` clause of an `if` statement is optional.
+
+     ```python
+     if condition:
+         # Run this code if the condition is True
+     else:
+         # Run this code if the condition is False
+     ```
+
+   - You can chain if statements using `elif`.
+
+     ```python
+     if condition1:
+         # Run this code if the condition is True
+     elif condition2:
+         # Run this code if condition1 is False and condition2 is True
+     .
+     .	# {Any number of elif can go here}
+     .
+     else:
+         # Run this code if the condition is False
+     ```
+
+   - iif can also be nested inside another if or else or elif if required.
+
+6. #### The while statement
+
+   - A `while` statement allows you to execute a block of code repeatedly, as long as a condition remains true.
+
+   - A `while` statement can also have an `else` clause that will be executed exactly once when the condition, that's mentioned is no longer true. 
+
+     ```python
+     while condition:
+         # Run this code while condition is True.
+     else:	# else is optional
+         # Run this code once the condition is no longer true.
+         # else is optional.
+         # else will only run when the while is exited cleanly that is 		without breaking
+     ```
+
+7. #### Loops
+
+   - In Python, loops (just as in any other language) are a way to execute a specific block of code several times. 
+   - loops are used to iterate or loop over what we call **iterables**.
+     - An iterable is anything that can be looped over.
+     - An iterable is a collection of things that have been grouped together to form a large collective.
+       - Strings
+       - Lists
+       - Dictionaries
+       - Files
+       - Sets
+       - Tupples
+
+8. #### For Loops
+
+   - The `for` loop in Python is also referred to as the `for…in` loop. (For loop in python is different from other languages like C/C++ and Java because of its syntax).
+
+   - A `for` loop is used when you have a block of code that you would like to execute repeatedly a given **number of times**.
+
+     - The loop contrasts and differs from a `while` statement in that in a `for` loop, the repeated code block is ran a **predetermined number of times**, while in a `while` statement, the code is ran an **arbitrary number of times** as long as a condition is satisfied.
+
+     ```python
+     # member is any single constituent in the iterable
+     for member in iterable:
+         # Execute the code for each constituent member of the iterable
+         pass # In Python, pass is a null statement. It indicated that 			 # the body 
+     ```
+
+   - As with a `while` statement, an `else` statement can also be optionally used with a `for` loop. 
+
+     - In this case, the code inside the `else` block will be executed exactly once when the loop exits cleanly.
+     - Exiting cleanly means that the loop went through all the members of the iterable without breaking.
+
+     ```python
+     for member in iterable:
+         # run this code for each member
+     else:
+         # run this once after loop ends cleanly,i.e., without breaking
+     ```
+
+   - **The range function**
+
+     - Python's `range` function is a built-in function that generates a `list` of numbers.
+
+     - This list is mostly used to iterate over using a `for` loop.
+
+     - This function is used when you want to perform an action a predetermined number of times
+
+       **`range([start], stop, [step])`, parameters inside [] are optional, that is start and step are optional.**
+
+     - `start`: This is the starting number of the sequence. (default is 0)
+
+     - `stop`: This means generate numbers up to but not including this number.
+
+     - `step`: This is the difference between each number in the sequence. (default is 1)
+
+       ```python
+       print(range(10)) # range(0, 10)
+       # to view the numbers cast this to list
+       print(list(range(10))) # [0,1,2,3,4,5,6,7,8,9]
+       print(list(range(1, 11))) # [1,2,3,4,5,6,7,8,9,10]
+       print(list(range(2, 21, 2))) # [2,4,6,8,10,12,14,16,18,20]
+       
+       for num in range(1, 11):
+           print(num ,' squared is ', num * num) # prints square for numbers 1 to 10.
+       ```
+
+   - Nesting loops : Nesting** can be defined as the practice of placing loops inside other loops. 
+
+   - There is no limit to how far you can nest loops, though you should keep code readability in mind when writing nested loops. You don't want to nest so much that you cannot easily deduce what the code does or the expected results of running the code at a glance.
+
+   - **Breaking out of for loops**
+
+     - When running loops, sometimes, we might want to interrupt or intervene in the execution of the loops before it runs its full course due to an external factor.
+
+     - Python provides us with three statements that can be used to achieve this:
+
+       - `break` - The `break` statement allows you to **exit a loop** based on an external trigger. This means that you can exit the loop based on a condition external to the loop. This statement is usually used in conjunction with a conditional `if` statement.
+
+         ```python
+         for number in range(1, 11):
+             product = number * 2
+             print(number, "* 2 = ", product)
+             if number == 4
+             	break
+         print("Loop completed")
+         """
+         1 * 2 =  2
+         2 * 2 =  4
+         3 * 2 =  6
+         4 * 2 =  8
+         Loop completed
+         """
+         ```
+
+         
+
+       - `continue` - The `continue` statement allows you to **skip over the part of a loop** where an external condition is triggered, but then goes on to complete the rest of the loop. This means that the current run of the loop will be interrupted, but the program will return to the top of the loop and continue execution from there.
+
+         ```python
+         for number in range(1, 11):
+             if number == 4:
+                 continue
+             product = number * 2
+             print(number, "* 2 = ", product)
+         print("Loop completed")
+         """
+         1 * 2 =  2
+         2 * 2 =  4
+         3 * 2 =  6
+         5 * 2 =  10
+         6 * 2 =  12
+         7 * 2 =  14
+         8 * 2 =  16
+         9 * 2 =  18
+         10 * 2 =  20
+         """
+         ```
+
+         
+
+       - `pass` - The `pass` statement allows you to handle an external trigger condition without affecting the execution of the loop.
+
+         - The `pass` statement simply tells the program to proceed as normal.
+         - The `pass` statement is also mostly used as a placeholder.
+
+     - 
