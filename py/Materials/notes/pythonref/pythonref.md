@@ -182,14 +182,16 @@
 
 ---
 
+<details> <summary> Data types, Operators = [Numerical, Strings, Lists, Booleans], [arithmetic, assignment, relational, logical, membership]</summary>
+
 ### Data Types in Python
 
   1. Data types classify data, **define different operations** that can be performed on the data and **how the data is stored** and the **meaning of the data**.
 
   2. **Types of data**
-      1. **_Numerical Data_**
+      1. **_Numerical Data_**  (Immutable)
 
-          1. Integers
+          1. Integers 
               - Whole Numbers (positive or negative)
           - have unlimited precision unlike C/C++, Java. (Limited only by available memory).
 
@@ -197,8 +199,7 @@
               large_integer = 34567898327463893216847532149022563647754228543901666214555336432788998
               print(large_integer)
               ```
-          ```
-          
+              
           2. Floating Point Numbers
               - A number with decimal point(all real numbers).
               - `type(3.333)` = float
@@ -213,11 +214,14 @@
               - Octal - prefix with 0o
               (In C/C++, Java we just prefix it with 0).
           - **To convert between number system** use bin(), hex(), oct() functions.
-          ```
-
-          - Python also supports complex number
-
-      2. [**Strings**](#Strings)
+          
+- Python also supports complex number
+          
+2. [**Strings**](#Strings) (Immutable)
+   
+      3. **[Lists](#lists-basics)**
+      
+      4. **[Booleans](#booleans)**
 
 ### Operators
 
@@ -250,6 +254,12 @@
         ![Shorthand operators table](./pythonref.assets/m7DgCqLZRnm7N51fMYDZ)
 
     3. Arithmetic operators in Python follow the standard order of operations in mathematics: PEMDAS.
+    
+3. **[Comparison operators](#comparison-operators)**
+
+4. [Logical Operators](#logical-operators)
+
+5. [Membership operators](#membership-operators)
 
 
 ### Strings
@@ -292,6 +302,9 @@
      print(string) # Hello	| No Change
      string = "Bye"	# | No Change But Reassigned 
      print(string) # Bye
+     
+     #string immutability
+     string[0] = 'R' # error : 'str' object does not support item assignment
      ```
 
 8. Python **strings are indexed** starting with 0
@@ -456,73 +469,218 @@
     len(bigbiglist) # return number of elements in the list - 2 in this case
     ```
 
-	9. **Indexing in list**
+9. **Indexing in list**
 
-    - Indexing starts with 0.
+   - Indexing starts with 0.
+   - Index can also be negative meaning get the element from the end of the list
 
-    - Index can also be negative meaning get the element from the end of the list
+   ```python
+   digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   digits[0] # 0
+   digits[5] # 5
+   digits[-5] # 5
+   digits[4] # 4
+   digits[-4] # 6
+   ```
+
+10. **Slicing in list**
+
+    - You can slice a list that is get a sub list from the list using - `list[start_index : end_index]`, end_index element is not included in the sub list.
+    - **The original list remains unchanged by slicing operation**.
+
+    ```python
+    digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    few_digits = digits[2 : 5]
+    print(few_digits) # [2, 3, 4]
+    print(digits) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print(digits[4: ]) # [4, 5, 6, 7, 8, 9]
+    print(digits[ : 4]) # [0, 1, 2, 3]
+    ```
+
+11. **Adding two lists**
+
+    - You can add two lists together by using the `+` operator. The elements of all of the lists being concatenated are brought together inside one list.
+      - Elements will be repeated.
+
+    ```python
+    list1 = [0, 'a', "string"]
+    list2 = ["string", 1, 'b']
+    list3 = list1 + list2
+    print(list3) # [0, 'a', 'string', 'string', 1, 'b']
+    list4 = list1 + list2 + list3
+    print(list4) # [0, 'a', "string", "string", 1, 'b', 0, 'a', 'string', 'string', 1, 'b']
+    ```
+
+12. **Changing Values in a list** 
+
+    - As lists are mutable, there content can be changed.
+
+    - You can change value through its index like `digits[5] = 10`.
+
+    - You can also use list.append() function to insert a value at the end of a list.
+
+      `digits.append(11)`
+
+    - You can also assign slices of a list, this **replaces ** the target slice with whatever you assign, regardless of the initial size of the list.
+
+      `digits[2 : 8] = ["deleted"]` 	# [0, 1, 'deleted', 8, 9]
+
+    - **An important thing to note is that when you assign a list, it points it to an object in the memory. If you assign another variable to the variable that references that list, the new variable also references that same list object in the memory. Any changes made using either reference will always change the same list object in the memory.**
+
+    ```python
+    list1 = [0, 1, 2, 3, 4, 5] # list 1 points to an object in memory that is this list [0, 1, 2, 3, 4, 5]
+    list2 = list1 # list2 will also points to the same object
+    list2[0] = 100 # this is equavalent to list1[0] = 100
+    				# as both point to the same list in memory
+    print(list1, list2) # both will change
+    ```
+
+ 13. **More about list is discussed latter in the reference.**
+
+### Booleans
+
+ 1. Boolean data types are values that can only be one of two values, `True` or `False`
+
+ 2. Boolean data type has `bool` operator.
+
+    ```python
+    print(True) # True
+    print(False) # False
+    print(10 < 1000) # True
+    print(10 % 10 == 1) # False
+    print(type(True)) # <class 'bool'>
+    ```
+
+3. Boolean values are largely associated with [control statements](#control-structures).
+
+4. #### Comparison Operators 
+
+   - Also called **relational operator.**
+
+   - Comparison operators compare the values of objects or the objects, identities themselves. The objects don't need to be of the same type.
+
+   ![List of comparison operator](pythonref.assets/noVRrNeXTWGIIvwqIvcO)
+
+   ```python
+   print(10 < 11) # True
+   print(len("Open") >= 5) # False
+   print(len(["One Element"]) > 2) # False
+   print("Foobar" == "Foobar") # True
+   a = 1
+   b = a
+   print(a is b) # True
+   c = 2
+   print(a is c) # False
+   c = 1
+   print(a is c) # True
+   print(a is not None) # True
+   print(a is None) # False
+   
+   list1 = [1,2,3]
+   list2 = list1
+   list1 is list2 # True
+   list3 = [1, 2, 3]
+   list3 is list1 # False as both are at different address in memory
+   ```
+
+   - `is` is true when both operands reference the same object in the memory.
+
+   - `None` is Python equivalent of `null` means it points to nothing in memory.
+
+   - ** To get the address in memory of object use `id()` function.
+
+   - #### A Question about `is` operator?
+
+     Why id's for int, string are same and not for list?
+
+     ```python
+     # Why this behaviour:
+     a = 10
+     b = 10
+     print(f"id(a)={id(a)} & id(b)={id(b)} : {a is b}")
+     # this prints - True with same id
+     # On the other hand with lists
+     l1 = [1,2,3]
+     l2 = [1,2,3]
+     print(f"id(l1)={id(l1)} & id(l2)={id(l2)} : {l1 is l2}")
+     # this prints - False with different ids
+     ```
+
+     #### Answer
+
+     ```py
+     Sometimes (and by design it's an implementation detail) Python caches certain values for reuse.
+     
+     In particular it can only safely cache immutable types like strings and integers. Since list1 and list2 are mutable, it would be problematic for them to refer to the same object internally as mutations of one would then be reflected in the other.
+     ```
+
+     - Read [is operator behaviour with bigger ints](https://stackoverflow.com/a/28864111/6008082).
+
+     - **Do not use `is` to compare integers.**
+
+     - [Comparisons to singletons like None should always be done with `is` or `is not`, never the equality operators.](python.org/dev/peps/pep-0008/#programming-recommendations)
+
+     - You can check types using is - `type(1) is int`returns true
+
+       ```python
+       a = 256
+       b = 256
+       a is b # True
+       a = 257
+       b = 257
+       a is b # False
+       numbers outside [-5, 256] are not cached.
+       ```
+
+ 5. #### Logical Operators
+
+    - Logical operator combine Boolean expressions.
+
+      ![List of logical operator](pythonref.assets/M51ImwheQierlqLiifX3)
+
+    - `and` is a **short-circuit operator**, in that it only evaluates the second argument if the first one is `True`. `or` is also a short-circuit operator, in that it will only evaluate the second argument if the first one is `False`.
 
       ```python
-      digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-      digits[0] # 0
-      digits[5] # 5
-      digits[-5] # 5
-      digits[4] # 4
-      digits[-4] # 6
+      print(not False) # True
+      print(True or False) # True
+      print(True and False) # False
+      
+      fruits = ["banana", "mangoes", "apples"]
+      wants_fruits = True
+      print(len(fruits) > 0 and wants_fruits) # True
       ```
 
-	10. **Slicing in list**
+ 6. #### Membership Operators
 
-     - You can slice a list that is get a sub list from the list using - `list[start_index : end_index]`, end_index element is not included in the sub list.
+    - The operators `in` and `not in` test for membership.
 
-     - **The original list remains unchanged by slicing operation**.
+    - All sequences (for example, lists and strings), support this operator. 
 
-       ```python
-       digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-       few_digits = digits[2 : 5]
-       print(few_digits) # [2, 3, 4]
-       print(digits) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-       print(digits[4: ]) # [4, 5, 6, 7, 8, 9]
-       print(digits[ : 4]) # [0, 1, 2, 3]
-       ```
+      - For lists, these operators go through each element to see whether the element being searched for is within the list. 
+      - For strings, the operators check whether the substring can be found within the string. 
 
-	11. **Adding two lists**
+    - The return values for these operators are `True` or `False`.
 
-     - You can add two lists together by using the `+` operator. The elements of all of the lists being concatenated are brought together inside one list.
+      ```python
+      numbers = [0,1,2,3,4,5,6]
+      print(3 in numbers) numbers = [0,1,2,3,4,5,6]
+      print(3 in numbers) # True
+      print(30 in numbers) # False
+      print(3 not in numbers) # False
+      print(30 not in numbers) # True# True
+      print(30 in numbers) # False
+      print(3 not in numbers) # False
+      print(30 not in numbers) # True
+      
+      warning = "lord voldemort has returned"
+      print("lord" in warning) # True
+      print("Lord" in warning) # False
+      print("lord" not in warning) # False
+      ```
 
-       - Elements will be repeated.
+</details>
 
-       ```python
-       list1 = [0, 'a', "string"]
-       list2 = ["string", 1, 'b']
-       list3 = list1 + list2
-       print(list3) # [0, 'a', 'string', 'string', 1, 'b']
-       list4 = list1 + list2 + list3
-       print(list4) # [0, 'a', "string", "string", 1, 'b', 0, 'a', 'string', 'string', 1, 'b']
-       ```
+---
 
-	12. **Changing Values in a list** 
 
-     - As lists are mutable, there content can be changed.
 
-     - You can change value through its index like `digits[5] = 10`.
-
-     - You can also use list.append() function to insert a value at the end of a list.
-
-       `digits.append(11)`
-
-     - You can also assign slices of a list, this **replaces ** the target slice with whatever you assign, regardless of the initial size of the list.
-
-       `digits[2 : 8] = ["deleted"]` 	# [0, 1, 'deleted', 8, 9]
-
-     - **An important thing to note is that when you assign a list, it points it to an object in the memory. If you assign another variable to the variable that references that list, the new variable also references that same list object in the memory. Any changes made using either reference will always change the same list object in the memory.**
-
-       ```python
-       list1 = [0, 1, 2, 3, 4, 5] # list 1 points to an object in memory that is this list [0, 1, 2, 3, 4, 5]
-       list2 = list1 # list2 will also points to the same object
-       list2[0] = 100 # this is equavalent to list1[0] = 100
-       				# as both point to the same list in memory
-       print(list1, list2) # both will change
-       ```
-
-       
