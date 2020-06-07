@@ -700,6 +700,8 @@
 
 ---
 
+<details> <summary> Control Structures and Functions : if else, while, for, functions, lambdas. </summary>
+
 ### Control Structures
 
 1. **Program flow** describes the way in which statements in code are executed. 
@@ -757,7 +759,7 @@
      else:	# else is optional
          # Run this code once the condition is no longer true.
          # else is optional.
-         # else will only run when the while is exited cleanly that is 		without breaking
+         # else will only run when the while is exited cleanly that is without breaking
      ```
 
 7. #### Loops
@@ -785,37 +787,38 @@
      # member is any single constituent in the iterable
      for member in iterable:
          # Execute the code for each constituent member of the iterable
-         pass # In Python, pass is a null statement. It indicated that 			 # the body 
-     ```
-
-   - As with a `while` statement, an `else` statement can also be optionally used with a `for` loop. 
-
+         pass # In Python, pass is a null statement. It indicated that
+     		 # the body will be implemented latter.
+  ```
+   
+- As with a `while` statement, an `else` statement can also be optionally used with a `for` loop. 
+   
      - In this case, the code inside the `else` block will be executed exactly once when the loop exits cleanly.
-     - Exiting cleanly means that the loop went through all the members of the iterable without breaking.
-
+  - Exiting cleanly means that the loop went through all the members of the iterable without breaking.
+   
      ```python
      for member in iterable:
          # run this code for each member
      else:
          # run this once after loop ends cleanly,i.e., without breaking
-     ```
-
-   - **The range function**
-
-     - Python's `range` function is a built-in function that generates a `list` of numbers.
-
-     - This list is mostly used to iterate over using a `for` loop.
-
-     - This function is used when you want to perform an action a predetermined number of times
-
-       **`range([start], stop, [step])`, parameters inside [] are optional, that is start and step are optional.**
-
-     - `start`: This is the starting number of the sequence. (default is 0)
-
-     - `stop`: This means generate numbers up to but not including this number.
-
-     - `step`: This is the difference between each number in the sequence. (default is 1)
-
+  ```
+   
+- **The range function**
+   
+  - Python's `range` function is a built-in function that generates a `list` of numbers.
+   
+  - This list is mostly used to iterate over using a `for` loop.
+   
+  - This function is used when you want to perform an action a predetermined number of times
+   
+    **`range([start], stop, [step])`, parameters inside [] are optional, that is start and step are optional.**
+   
+  - `start`: This is the starting number of the sequence. (default is 0)
+   
+  - `stop`: This means generate numbers up to but not including this number.
+   
+  - `step`: This is the difference between each number in the sequence. (default is 1)
+   
        ```python
        print(range(10)) # range(0, 10)
        # to view the numbers cast this to list
@@ -825,20 +828,20 @@
        
        for num in range(1, 11):
            print(num ,' squared is ', num * num) # prints square for numbers 1 to 10.
-       ```
-
-   - Nesting loops : Nesting** can be defined as the practice of placing loops inside other loops. 
-
-   - There is no limit to how far you can nest loops, though you should keep code readability in mind when writing nested loops. You don't want to nest so much that you cannot easily deduce what the code does or the expected results of running the code at a glance.
-
-   - **Breaking out of for loops**
-
-     - When running loops, sometimes, we might want to interrupt or intervene in the execution of the loops before it runs its full course due to an external factor.
-
-     - Python provides us with three statements that can be used to achieve this:
-
-       - `break` - The `break` statement allows you to **exit a loop** based on an external trigger. This means that you can exit the loop based on a condition external to the loop. This statement is usually used in conjunction with a conditional `if` statement.
-
+    ```
+   
+- Nesting loops : Nesting** can be defined as the practice of placing loops inside other loops. 
+   
+- There is no limit to how far you can nest loops, though you should keep code readability in mind when writing nested loops. You don't want to nest so much that you cannot easily deduce what the code does or the expected results of running the code at a glance.
+   
+- **Breaking out of for loops**
+   
+  - When running loops, sometimes, we might want to interrupt or intervene in the execution of the loops before it runs its full course due to an external factor.
+   
+  - Python provides us with three statements that can be used to achieve this:
+   
+    - `break` - The `break` statement allows you to **exit a loop** based on an external trigger. This means that you can exit the loop based on a condition external to the loop. This statement is usually used in conjunction with a conditional `if` statement.
+   
          ```python
          for number in range(1, 11):
              product = number * 2
@@ -853,14 +856,12 @@
          4 * 2 =  8
          Loop completed
          """
-         ```
-
-         
-
-       - `continue` - The `continue` statement allows you to **skip over the part of a loop** where an external condition is triggered, but then goes on to complete the rest of the loop. This means that the current run of the loop will be interrupted, but the program will return to the top of the loop and continue execution from there.
-
-         ```python
-         for number in range(1, 11):
+      ```
+   
+    - `continue` - The `continue` statement allows you to **skip over the part of a loop** where an external condition is triggered, but then goes on to complete the rest of the loop. This means that the current run of the loop will be interrupted, but the program will return to the top of the loop and continue execution from there.
+   
+      ```python
+     for number in range(1, 11):
              if number == 4:
                  continue
              product = number * 2
@@ -878,12 +879,205 @@
          10 * 2 =  20
          """
          ```
+       
+      
+   
+    - `pass` - The `pass` statement allows you to handle an external trigger condition without affecting the execution of the loop.
+   
+      - The `pass` statement simply tells the program to proceed as normal.
+     - The `pass` statement is also mostly used as a placeholder.
 
+
+### Functions
+
+1. Used to group lines of that implement a functionality together.
+
+2. helps to use the same code several times in the program. Reduces redundancy.
+
+3. Helps to abstract away complex code in the program.
+
+4. write functions that only perform one specific task. Because -
+
+   - easier to modularize.
+   - easier to debug.
+   - maintainable.
+
+5. Functions may take optional inputs to work with and may optionally return a value or values.
+
+6. Built-In functions
+
+   - The Python interpreter has a number of built-in functions and types that are always available.
+   - built in function can be used anywhere without importaion.
+   - Some example of built in functions are:
+     - input()	
+     - print()
+     - map()
+
+7. User defined functions
+
+   - functions written(defined) by the programmer.
+
+   - The main use of functions is to help us organize our programs into logical fragments that work together to solve a specific part of our problem.
+
+     ```python
+     def function_name(parameter_one, parameter_two, parameter_n):
+         # Write your code for function here
+         return # optional, if not provided function return None
+     ```
+
+   - **To define a function, we can use the following steps:**
+
+     1. Use the `def` keyword, followed by the function name.
+     2. Add parameters (if any) to the function within the parentheses. End the function definition with a full colon.
+     3. Write the logic of the function.
+     4. Finally, use the `return` keyword to return the output of the function. This is optional, and if it is not included, the function automatically returns `None`.
+
+   - the name of the function should be descriptive.
+
+   - **Calling a function**
+
+     - Calling a function means executing the logic that is defined inside of the function.
+     - call statement - `function_name([parameters])`
+
+8. **Global and Local Variables**
+
+   - Local Variables : Defined inside of a function body.
+     - only accessible inside the function
+       - Error when local variables are accessed globally - `NameError: name 'total' is not defined`
+       - you can return the value of local variable to access **it's value** outside the function.
+   - Global Variables : Defined outside of a function body.
+     - accessible throughout the programs, outside and inside of functions.
+
+9. **Function Return**
+
+   - The `return` statement in Python is used within functions, to actually return something to the caller of the function. 
+- Without a `return` statement, every function will return `None`.
+   - a `return` statement is required if you need to use the result of calling a function for any further processing in your code. 
+
+10. **Using Main in Python**
+
+  - Most programming languages (like C/C++,  Java)  requires a special function called `main()`, which tells the operating system what code to execute when a program is invoked. *main() acts as a starting point in the program*.
+
+  - In Python, this is not necessary, but it is a good and logical way to structure a program.
+
+  - Before the Python interpreter executes our program, it defines a few special variables. One of them is `__name__`, and it will automatically be set to `__main__` if our program will be executed by itself, in a standalone fashion.
+
+  - However, if our program will be imported by another program, then `__name__` will be set to the name of that other program.
+
+  - We can easily determine whether the program is standalone or is being used by another program as an import. Based on that, we can decide to either execute or exclude some of the code in a program.
+
+    ```python
+    def summation(first, second):
+        total = first + second
+        return total
+     
+    def main():
+        outer_total = summation(10, 20) * 2
+        print("Double the total is " + str(outer_total))
+     
+    if __name__ == "__main__":
+        main()
+    ```
+
+  - *In Python, there is nothing special about the name main. We could have called this function anything that we wanted. We chose main to be consistent with some of the other languages.*
+
+11. **Function Arguments**
+
+    - Parameters are the information that need to be passed to the function for it to do its work.
+
+    - Also known as arguments, but arguments are thought of more as the actual values or references assigned to the parameter variables.
+
+    - Types of arguments:
+
+      - Required arguments - Required arguments are the types of arguments that have to be present when calling a function.
+
+        ```python
+        def division(first, second):
+            return first/second
+        quotient = division(10, 2)
+        ```
+
+      - Keyword arguments - arguments are passed using names of parameter, you can change the order of parameters when passing named arguments.
+
+        ```python
+        def division(first, second):
+            return first/second
          
+        quotient = division(second=2, first=10)
+        print(quotient)
+        ```
 
-       - `pass` - The `pass` statement allows you to handle an external trigger condition without affecting the execution of the loop.
+      - Default arguments - Default arguments are those that take a default value if no argument value is passed during the function call. 
 
-         - The `pass` statement simply tells the program to proceed as normal.
-         - The `pass` statement is also mostly used as a placeholder.
+        - You can assign this default value with the assignment operator, `=`.
 
-     - 
+          ```python
+          def division(first, second=2):
+              return first/second
+           
+          quotient = division(10)
+          print(quotient) # 5.0
+          ```
+
+        - Note that even if the argument named `second` has a default value, you can still pass a value to it, and this passed value will override the default value.
+
+          ```python
+          def division(first, second=2):
+              return first/second
+           
+          quotient = division(10, 5) # default value will be ignored
+          print(quotient) # 2.0
+          ```
+
+      - A variable number of arguments - You can pass any number of arguments to function using the special `*`(asterisk) operator.
+
+        ```python
+        def addition(*numbers):
+            sum = 0
+            for num in numbers:
+                sum += num
+            return sum
+        result = addition(1,2,3,4,5)
+        print(result) # 15
+        result = addition(1,2,3,4,5,5)
+        print(result) # 20
+        l = [10,9,8,7]
+        result = addition(*l)
+        print(result) # 34
+        ```
+
+12. Anonymous function
+
+    - Also called **Lambda Functions**.
+    - Defined using keyword lambda.
+    - Lambda Functions do not have a name.
+      - They acts as a throwaway, meaning that they are only required where they are defined, and are not to be called in other parts of the codebase.
+    - Syntax:
+
+    ```python
+    lambda argument_list : expression
+    ```
+
+    - You can assign the function to a variable to give it a name.
+
+      ```python
+      f = lambda x : x ** 2
+      print(f(4)) # 16
+      ```
+
+    - Lambda functions can be used to pass as an argument to other function like `map()`, `filter()` and `reduce()`.
+
+      - map() - `map()` applies the `func` function to all of the elements of the iterable sequence. It returns a new list, with the elements changed by `func`.
+
+      ```python
+      celsius = [25, 31, 30, 26, 33]
+      
+      # converting celsius to fahrenheit using map and lambda function
+      fahrenheit = list(map(lambda c : (c * (9 / 5)) + 32, celsius))
+      print(*fahrenheit) # 77.0 87.80000000000001 86.0 78.80000000000001 91.4
+      ```
+
+</details>
+
+---
+
