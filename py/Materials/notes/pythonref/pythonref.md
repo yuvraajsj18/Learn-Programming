@@ -4,6 +4,7 @@
 
 <details> <summary> Basics - Syntax, Variables, Input, Comments, Indentation </summary>
 
+
 ### Introduction
 
   1. Installation
@@ -201,6 +202,7 @@
 ---
 
 <details> <summary> Data types, Operators = [Numerical, Strings, Lists, Booleans], [arithmetic, assignment, relational, logical, membership]</summary>
+
 
 ### Data Types in Python
 
@@ -553,7 +555,7 @@
     print(list1, list2) # both will change
     ```
 
- 13. **More about list is discussed latter in the reference.**
+ 13. **[More about list is discussed latter in the reference.](#lists-more)**
 
 ### Booleans
 
@@ -789,6 +791,7 @@
          # Execute the code for each constituent member of the iterable
          pass # In Python, pass is a null statement. It indicated that
      		 # the body will be implemented latter.
+     ```
   ```
    
 - As with a `while` statement, an `else` statement can also be optionally used with a `for` loop. 
@@ -802,23 +805,23 @@
      else:
          # run this once after loop ends cleanly,i.e., without breaking
   ```
-   
+
 - **The range function**
-   
+  
   - Python's `range` function is a built-in function that generates a `list` of numbers.
-   
+  
   - This list is mostly used to iterate over using a `for` loop.
-   
+  
   - This function is used when you want to perform an action a predetermined number of times
-   
+  
     **`range([start], stop, [step])`, parameters inside [] are optional, that is start and step are optional.**
-   
+  
   - `start`: This is the starting number of the sequence. (default is 0)
-   
+  
   - `stop`: This means generate numbers up to but not including this number.
-   
+  
   - `step`: This is the difference between each number in the sequence. (default is 1)
-   
+  
        ```python
        print(range(10)) # range(0, 10)
        # to view the numbers cast this to list
@@ -829,19 +832,19 @@
        for num in range(1, 11):
            print(num ,' squared is ', num * num) # prints square for numbers 1 to 10.
     ```
-   
+  
 - Nesting loops : Nesting** can be defined as the practice of placing loops inside other loops. 
-   
+  
 - There is no limit to how far you can nest loops, though you should keep code readability in mind when writing nested loops. You don't want to nest so much that you cannot easily deduce what the code does or the expected results of running the code at a glance.
-   
+  
 - **Breaking out of for loops**
-   
+  
   - When running loops, sometimes, we might want to interrupt or intervene in the execution of the loops before it runs its full course due to an external factor.
-   
+  
   - Python provides us with three statements that can be used to achieve this:
-   
+  
     - `break` - The `break` statement allows you to **exit a loop** based on an external trigger. This means that you can exit the loop based on a condition external to the loop. This statement is usually used in conjunction with a conditional `if` statement.
-   
+  
          ```python
          for number in range(1, 11):
              product = number * 2
@@ -857,9 +860,9 @@
          Loop completed
          """
       ```
-   
+  
     - `continue` - The `continue` statement allows you to **skip over the part of a loop** where an external condition is triggered, but then goes on to complete the rest of the loop. This means that the current run of the loop will be interrupted, but the program will return to the top of the loop and continue execution from there.
-   
+  
       ```python
      for number in range(1, 11):
              if number == 4:
@@ -878,12 +881,12 @@
          9 * 2 =  18
          10 * 2 =  20
          """
-         ```
-       
+      ```
       
-   
+      
+  
     - `pass` - The `pass` statement allows you to handle an external trigger condition without affecting the execution of the loop.
-   
+  
       - The `pass` statement simply tells the program to proceed as normal.
      - The `pass` statement is also mostly used as a placeholder.
 
@@ -1074,8 +1077,604 @@
       
       # converting celsius to fahrenheit using map and lambda function
       fahrenheit = list(map(lambda c : (c * (9 / 5)) + 32, celsius))
-      print(*fahrenheit) # 77.0 87.80000000000001 86.0 78.80000000000001 91.4
+      print(*fahrenheit) # 77.0 87.80000000000001 86.0 78.80000000000001 91.4 # floating point imprecision
       ```
+
+</details>
+
+---
+
+<details><summary>Data Structures in Python</summary>
+
+### Lists (More)
+
+1. A **list** is a data structure that holds ordered collections of related data(not necessarily same type of data).
+
+2. Python lists are much more powerful and flexible than C/C++ and Java arrays.
+
+3. The main properties of Python lists are as follows:
+
+   - They are ordered.
+   - They contain objects of arbitrary types.
+   - The elements of a list can be accessed by an index.
+   - They are arbitrarily nestable, that is, they can contain other lists as sublists.
+   - They have variable sizes.
+   - They are **mutable**, that is, the elements of a list can be changed.
+
+4. List Syntax: Creating list in different ways -
+
+   ```python
+   # Empty list
+   empty = []
+   
+   # list containing numbers
+   numbers = [1, 2, 3, 5, 7, 11]
+   
+   # list with mixed types
+   mixed = ["one", 2, "three", 4.0]
+   
+   # using list comprehension
+   squares = [num**2 for num in numbers] # discussed below
+   ```
+
+5. **List Methods**
+
+   - **list.append(item) ** - The `list.append(item)` method adds a single item to the end of a list. This doesn't return a new list – it only modifies the original.
+   
+   - **list.extend(iterable)** - The `list.extend(iterable)` method takes one argument, which should be an iterable data type. It then extends the list by appending all of the items from the iterable to the list.
+   
+     ```python
+     things = ["first"]
+     things.append("another thing")
+     print(things) # ['first', 'another thing']
+      
+     things.extend("another thing")
+     print(things) # ['first', 'another thing', 'a', 'n', 'o', 't', 'h', 'e', 'r', ' ', 't', 'h', 'i', 'n', 'g']
+     # extend treated string as an iterable
+     
+     a = [1,2,3]
+     a.extend([4,5,6])
+     print(a) # [1,2,3,4,5,6]
+     ```
+   
+   - **list.insert(index, item)** - The list.insert(index, item) method inserts an item at a given position in a list. The method takes two arguments, index and item.   (both required).
+   
+   - **list.remove(item)** - The list.remove(item) method removes from the list the *first item* whose value matches the argument item that's passed in.
+   
+   - **list.pop([index])** - The `list.pop([index])` method removes the item at the given index of the list, and returns it. The index is an optional argument, and if it isn't passed in, the method will remove the last item in the list.
+   
+   - **list.clear()** - he `list.clear()` method removes all items from a list. An alternative to this method would be `del a[:]`.
+   
+   - **list.index(item, [start, end]) ** - The `list.index(item [, start [, end]])` method returns the index of the first item in the list whose value is `item`.
+   
+     - The parameters `start` and `end` are optional, and they indicate the position in the list at which the search for said item should start and end, respectively.
+     - If the specified item is not found in the list, Python raises a `ValueError`.
+   
+   - **list.count(item)** -  The `list.count(item)` method returns the number of times the given item occurs in the list.
+   
+   - **list.sort(key = None, reverse = False)** - The `list.sort(key=None, reverse=False)` method sorts the items of the list.
+   
+     - key is a function that's applied to list before comparision.
+   
+   - **list.copy()** - The `list.copy()` method returns a shallow copy of a list.
+   
+     - The `copy()` method returns a new list. It doesn't modify the original list.
+     - modification in new list will not be reflected in the original copy.
+     - [difference between shallow and deep copying](https://realpython.com/copying-python-objects/)
+   
+6. **List Comprehensions**
+
+   - This is way of creating list using for and if statements inside square brackets [ ]
+
+     ```python
+     numbers = [1,2,3,4,5]
+     squares = [num ** 2 for num in numbers]
+     print(*squares) # send after unpacking list so that each elements gets printed and not the list
+     even_squares = [num ** 2 for num in numbers if num % 2 == 0]
+     print(*even_squares)
+     ```
+
+     
+
+### Tuple
+
+1. **Tuples** are used to hold together multiple related objects.
+
+2. Tuples are similar to **Lists** .
+
+3. The key difference between lists and tuples is that you cannot change the elements of a tuple once they are set. This property of tuples is called **immutability**.
+
+4. Creating tuple -
+
+   ```python
+   t = (1, 2, 3)
+   print(t) # (1, 2, 3)
+   print(type(t)) # <class 'tuple'>
+   
+   # The parentheses are optional, and you might as well create a tuple using just the comma-separated values
+   pets = 'dog', 'cat', 'squirrel'
+   print(pets) # ('dog', 'cat', 'squirrel')
+   
+   # nested tuple
+   tup = (1, 2, (3, 4))
+   another_tup = 1, 2, (3, 4) # here outer parenthesis are not written explicityly but they are there
+   print(tup == another_tup) # True
+   ```
+
+5. For creating a tuple with one value, you will still need a comma.
+
+   ```python
+   one = (1)
+   type(one) # int
+   one = 1,
+   type(one) # tuple
+   ```
+
+6. Accessing Tuple Elements
+
+   - Indexing - we can use the index operator `[]` to access an element in a tuple by using its index. 
+     - Indices can also be negative. If you use a negative index, `-1` will reference the last element in the tuple.
+   - Slicing - slicing allows you to access a subset, or a slice, of the tuple.-
+     - `tupleToSlice[Start index (included):Stop index (excluded):Increment]`
+     - All parameter are optional.
+   - You can use indexing and slicing to access elements but you can not change them.
+
+7. Tuple Methods
+
+   - `any()` - The any() function returns True if any element of an iterable is True. If not, any() returns False.
+
+   - `tuple.count(item)` - This method returns the number of occurrences of an item in a tuple.
+
+   - `min()` -  This method returns the smallest element in a tuple.
+
+   - `max()`: This method returns the largest element in a tuple.
+
+   - `len()`: This method returns the total number of elements in a tuple
+
+   - Tuples can be concatenated
+
+     ```python
+     pets = ('cat', 'dog', 'horse')
+     wild = ('lion', 'zebra', 'antelope')
+     animals = pets + wild
+     print(animals) # ('cat', 'dog', 'horse', 'lion', 'zebra', 'antelope')
+     ```
+
+
+
+### Dictionary
+
+1. Dictionaries are data structures that hold data or information in a key-value order.
+
+2. Dictionaries, unlike lists, are indexed using keys, which are usually strings. 
+
+3. Dictionaries allow you to access whatever value you want, using the much easier to remember key.
+
+4. Types of dictionaries in Python
+
+   - The default, `dict` which is unordered.
+
+   - The special, `OrderedDict` which is ordered.
+
+   - he difference is that the keys in the default dictionary are stored in an unordered manner, whereas an `OrderedDict` stores key-value pairs in the order of insertion.
+
+5. **Creating dictionaries**
+
+   ```python
+   # first way
+   dictionary = {}
+   
+   # second way
+   dictionary = dict()
+   ```
+
+   - We can get the attributes and properties of dictionary object by using the built-in function : dir(dict).
+   - We can confirm we have an actual dictionary by using the built-in function `isinstance(object, class)`.
+
+6. **Checking for the Existence of Particular Keys**
+
+   - You can use the `in` keyword to check whether a particular key exists in a dictionary, without iterating through it. 
+
+   - This works the same way as it does in lists.
+
+     - you will get back a Boolean value of `True` if the key exists, and `False` if it doesn't.
+
+     ```python
+     a = {
+         "size": 10,
+         "weight": 50
+     }
+     print("size" in a) # True
+     print("length" in a) # False
+     ```
+
+7. **Adding data to a dictionary**
+
+   ```python
+   dictionary1 = dict(
+       state = "NY",
+       city = "New York",
+       code = 0
+   )
+   
+   # using dict function we assign values to keys using = operator.
+   
+   print(dictionary1)
+   
+   dictionary2 = {
+       "state": "Maryland",
+       "city": "Baltimore",
+       "code": 1
+   }
+   
+   # when using {}, we separate the keys(which are strings) from the value by using :
+   
+   print(dictionary2)
+   
+   # assing values to existing dictionaries using keys:
+   dictionary2['bird'] = "Baltimore oriole"
+   # This will add a new key to dictionary2, with the name bird and the value Baltimore oriole.
+   print(dictionary2)
+   # using the preceding format with an existing key will reassign that key to a new value
+   dictionary1['state'] = "New York"
+   print(dictionary1)
+   ```
+
+8. **Reading data from a dictionary**
+
+   ```python
+   # create a dictionary
+   dictionary1 = dict(
+    state = "NY",
+       city = "New York"
+   )
+   
+   # accessing a dictionary value via their keys - 
+   print(dictionary1['state'])
+   
+   # if key does not exist, we will get a key error
+   
+   # print(dictionary1['age'])  # key error
+   
+   # accessing value from dictionary using get() function
+   
+   print(dictionary1.get('state')) # NY
+   
+   # get() function returns None if an item does not exist instead of key error
+   print(dictionary1.get('age')) # None
+   
+   # you can also use the get() function to specify what should be returned when no value exists.
+   print(dictionary1.get('age', 'Key age is not defined'))
+   
+   ```
+   
+9. Iterating through dictionaries
+
+   ```python
+   # create a dictionary
+   dictionary1 = dict(
+       name = "Harry Potter",
+       house = "Griffindor", 
+   )
+   
+   # iterating though for loop, by default iterate through keys
+   for item in dictionary1:
+       print(item)
+   
+   # output - keys of the dictionary
+   # name
+   # house
+   
+   # iterating through keys explicityly using keys() function
+   print(dictionary1.keys()) # returns a list of keys
+   for item in dictionary1.keys():
+       print(item)
+   
+   # iterating through values explicitly using values() function
+   print(dictionary1.values())
+   for value in dictionary1.values():
+       print(value)
+   
+   
+   # iterating through both keys and values at the same time using items function
+   print(dictionary1.items())
+   for key, value in dictionary1.items():
+       print(key, value)
+   
+   # also
+   for key in dictionary1:
+       print(key, dictionary1[key])
+   ```
+
+10. Additional Dictionary Attributes
+
+    - **dict.update()** - The `.update()` method on dictionaries, is used to insert new key-value pairs into a dictionary, or update the value of an existing one.
+
+      ```python
+      dictionary = {}
+      
+      dictionary.update({"name": "Harry Potter"})
+      print(dictionary)   # {'name': 'Harry Potter'}
+      
+      # adding new content to dictionary using update()
+      dictionary.update({'House': 'Griffindor'})
+      print(dictionary)   # {'name': 'Harry Potter', 'House': 'Griffindor'}
+      
+      # changing content in the dictionary
+      dictionary.update({'name': "Hermionie Granger"})
+      print(dictionary)   # {'name': 'Hermionie Granger', 'House': 'Griffindor'}
+      
+      #.update() function would come in handy if you had two dictionaries with different keys that you wanted to combine into one.
+      ```
+
+    - **dict.clear()** - The `clear` method is used to remove all keys from a dictionary. 
+
+      - If you only want to remove one key-value pair, you can use the `del` keyword.
+
+        ```python
+        dictionary = dict(
+        	name = "Hermoinie",
+            House = "Griffindor"
+        )
+        
+        print(dictionary)
+        
+        del dictionary['House'] # deleting house key
+        print(dictionary)
+        
+        dictionary.clear() # removing all keys
+        print(dictionary) # empty dictionary
+        ```
+
+    - **dict.pop(key)** - deletes the key and returns the value. 
+
+      ```python
+      dictionary = dict(
+      	name = "Hermoinie",
+          house = "Griffindor"
+      )
+      print(dictionary)
+      
+      house = dictionary.pop('house')
+      print(dictionary)
+      print(house)
+      ```
+
+    - **dict.copy()** - The `copy` method is used to create shallow copies of dictionaries.
+
+    - **dict.popitem()** - The `popitem()` method pops and returns a random item from the dictionary. That item will no longer exist in the dictionary after that.
+
+    - **dict.setdefault(key, value)** - The `setdefault()` method takes two arguments: a key to be searched for in the dictionary, and a value.
+
+      - If the key exists in the dictionary, its value will be returned.
+      - If the key does not exist, it will be inserted with the value provided in the second argument.
+      - If no second argument was passed, any insertion will be done with the value `None`.
+
+    - **dict.fromkeys()** - The `dict.fromkeys()` method is used to create a dictionary from an iterable of keys, with whatever value is provided by the user. 
+
+      ```python
+      dict1 = dict.fromkeys(["name", "age"], "Nothing here yet")
+      print(dict1)
+      # if you do not provide a second argument, the values will be auto-set to None
+      dict2 = dict.fromkeys((1,2,3))
+      print(dict2)
+      ```
+
+11. **Ordered Dictionaries** -  **Ordered dictionaries** are dictionaries that maintain the insertion order of keys. This means that when you are iterating through them, you will always access the keys in the order in which they were inserted.
+
+    - The `OrderedDict` class is a `dict` subclass defined in the `collections` package that Python ships with.
+    - Note that when you are checking whether two `OrderedDict` are equal, the order of keys is also considered. Although for a normal `dict`, having the same key-value pairs is enough to declare equality, in `OrderedDict`, if they are not in the same order, those two objects are not equal.
+
+    ```python
+    # Write your code here
+    from collections import OrderedDict
+    
+    a = OrderedDict(name = "Harry Potter", house = "griffindor")
+    
+    print(a)
+    ```
+
+### Sets
+
+1. A **set** is a collection of data items that are unordered and unique, that is, items cannot be repeated.
+
+2. With no duplicates in sets, we are able to perform mathematical operations, such as unions and intersection. 
+
+   You can store any kind of valid string or integer in a set, so long as it is unique.
+
+3. Sets are mutable but the elements in them should be immutable, thus a set can not contain a list or a set. (you can use `frozenset` for inner set).
+
+4. **Creating Sets**
+
+   - Using set method - . The function takes either an iterable (like a list or a tuple) or a sequence (lists, tuples, and strings are all sequences). 
+
+     ```python
+     # empty set
+     set1 = set()
+     print(set1)
+     
+     set2 = set([1,2,3]) # set using list
+     print(set2)
+     
+     set3 = set((3,2,1, 1, 2)) # set using tuple
+     print(set3) # duplicate values are dropped from set
+     ```
+
+   - Using curly braces notation - 
+
+     ```python
+     set4 = {1,2,3,4,4}
+     print(set4) # {1, 2, 3, 4}
+     
+     set5 = {"String"}
+     print(set5) # {'String'}
+     
+     set6 = set("String")
+     print(set6) #{ 'i', 'r', 'S', 'n', 'g', 't'}
+     ```
+
+   - Passing a dictionary to the `set()` method will create a set of its keys.
+
+5. Adding data to a set
+
+   - **set.add()** - add an element to a set.
+
+   - **set.update()** - add all the elements of an iterable.
+
+     ```python
+     set1 = {1,2,3}
+     print(set1) # {1,2,3}
+     set1.add(4)
+     print(set1) # {1,2,3,4}
+     set1.update([4,5,6])
+     print(set1) # {1,2,3,4,5,6}
+     ```
+
+6. Reading data from a set
+
+   - *Set objects do not support indexes, so you cannot access values from them using indexes.*
+
+   - iterating through a set using for loop:
+
+     ```python
+     a = {1,2,3,4}
+     for num in a:
+         print(num)
+     ```
+
+   - **set.pop()** method to remove and return an item from the set.
+
+     - Items are removed from the beginning of the set.
+
+       ```python
+       a = {1,2,3,4}
+       print(a.pop()) # 1
+       print(a) # {2,3,4}
+       ```
+
+   - Sets have more utility in the actions that we can perform on them than as a store of data. 
+
+7. Removing data from a set
+
+   - `remove()` drops the item from the set and does not return it. If you try to remove a non-existing item, a `KeyError` will be raised.
+
+   - `discard()` drops the item and does not raise KeyError when item does not exist.
+
+   - `clear()` removes all the data from the set object.
+
+     ```python
+     a = {1,2,3,4}
+     a.remove(3)
+     print(a) # {1,2,4}
+     a.discard(4)
+     print(a) # {1,2}
+     ```
+
+   - **[Set Operations](https://en.wikipedia.org/wiki/Set_(mathematics)#Basic_operations)**
+
+     ```python
+     a = {1, 3, 5, 7, 9}
+     
+     b = {0, 2, 4, 6, 8}
+     
+     # union of two sets
+     
+     # using union() method
+     a_union_b = a.union(b)
+     print(a_union_b)
+     
+     # using | operator
+     a_union_b = a | b
+     print(a_union_b)
+     
+     
+     # intersection of two sets
+     
+     # using intersection() method
+     a_intersection_b = a.intersection(b)
+     print(a_intersection_b)
+     
+     # using & operator
+     a_intersection_b = {1,2,3} & {3,2,1}
+     print(a_intersection_b)
+     
+     
+     # difference of two sets
+     
+     # using difference() method
+     a_difference_b = a.difference(b)
+     print(a_difference_b)
+     
+     # using - operator
+     a_difference_b = {1, 2, 3, 4, 5} - {1, 2, 3, 5}
+     print(a_difference_b)
+     
+     # symmetric difference
+     a_sym_diff_b = a.symmetric_difference(b)
+     print(a_sym_diff_b)
+     
+     
+     # subset
+     
+     print(a.issubset(b))
+     print(b.issubset(a))
+     print({1,2,3}.issubset({1,2,3,4,5}))
+     
+     # superset
+     
+     print(a.issuperset(b))
+     print({1,2,3,4,5}.issuperset({1,2,3}))
+     
+     
+     # equality
+     
+     print(a == b)
+     print(a != b)
+     print({1,2,3} == {3,2,1})
+     
+     
+     # after all the operations the value of a and b are unchanged
+     
+     print(a, b)
+     
+     # to change them in the operation you can use the following function
+     
+     # difference_update()
+     a.difference_update({3, 5})
+     print(a)
+     
+     # intersection_update()
+     b.intersection_update({2, 4, 8})
+     print(b)
+     
+     # symmetric_difference_update()
+     c = {1, 2, 3, 4, 5}
+     c.symmetric_difference_update({3, 4, 5, 6, 7, 8})
+     print(c)
+     ```
+
+8. Frozen sets - 
+
+   - **Frozen sets** are just like sets, and they support all other set operations. 
+
+   - However, they are immutable, and they do not support adding or removing items.
+
+   - Frozen sets are useful for holding items that do not need to change; for example, a set containing the names of states in the United States.
+
+   - the `add`, `update`, `pop`, `discard`, and other methods that modify the structure of the frozen set, are not defined
+
+   - To create a frozen set, you can call the built-in `frozenset()` method with an iterable :
+
+     ```python
+     fset = frozenset([1,2,3,'a', 'b', 'c'])
+     print(fset)
+     
+     s = {fset, 1, 2, 3, 'a'} # set inside using frozen set
+     print(s)
+     ```
+
+
+
 
 </details>
 
