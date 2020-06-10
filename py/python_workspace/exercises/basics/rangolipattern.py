@@ -10,13 +10,14 @@ def print_rangoli(size):
     no_of_lines = 2 * size - 1
 
     actual_line = 0     # tracks number of character and dashes that is needed to be print
+    seperator = '-'
     for line in range(0, no_of_lines):
         # set limit of dashes and characters for printing
         no_of_dashes = 2 * (size - actual_line - 1)
         no_of_chars = 2 * actual_line + 1
 
         # print required number of dashes
-        print("-" * no_of_dashes, end = "")
+        print(seperator * no_of_dashes, end = "")
 
         # print required characters as per pattern
         actual_letter = 0
@@ -26,7 +27,7 @@ def print_rangoli(size):
 
             # add a - between characters except last char
             if letter < no_of_chars - 1:
-                print('-', end = "")
+                print(seperator, end = "")
 
             # when printed half characters reduce actual_size
             if letter < no_of_chars // 2:
@@ -35,7 +36,7 @@ def print_rangoli(size):
                 actual_letter -= 1
 
         # again print trailing dashes
-        print("-" * no_of_dashes)
+        print(seperator * no_of_dashes)
 
         # if printed half of required lines start reducing your characters
         if line < no_of_lines // 2:
