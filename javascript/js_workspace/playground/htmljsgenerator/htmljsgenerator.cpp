@@ -17,20 +17,25 @@ using namespace std;
 
 string readSampleHtml();
 string modify_html(string filename, string buffer);
-void create_html_file(string filename, string buffer);
-void create_js_file(string filename);
-void create_css_file(string filename);
+void create_html_file(string foldername, string filename, string buffer);
+void create_js_file(string foldername, string filename);
+void create_css_file(string foldername, string filename);
 
 int main(int argc, char **argv)
 {
-    // if no or more than one filename is given or the filename contains .
-    if (argc != 2 || regex_match(argv[1], regex(".*\\..*")))
+    if (argc != 3)
+    {
+        cout << "Run: htmljsgenerator foldername filename" << endl;
+        exit(1);
+    }
+    else if (regex_match(argv[1], regex(".*\\..*")))    // if filename contains .
     {
         cout << "Please provide filename without extension." << endl;
         exit(1);
     }
 
-    string filename = argv[1];
+    string foldername = argv[1];
+    string filename = argv[2];
 
     // get the text from the sample html file
     string sampleHtmlBuffer = readSampleHtml();
@@ -38,12 +43,12 @@ int main(int argc, char **argv)
     string modified_html_buffer = modify_html(filename, sampleHtmlBuffer);
 
     // create a folder named filename
-    string folder_cmd = "mkdir " + filename; 
+    string folder_cmd = "mkdir " + foldername; 
     system(folder_cmd.c_str());
 
-    create_html_file(filename, modified_html_buffer);
-    create_js_file(filename);
-    create_css_file(filename);
+    create_html_file(foldername,filename, modified_html_buffer);
+    create_js_file(foldername, filename);
+    create_css_file(foldername, filename);
 
     return 0;
 }
@@ -72,9 +77,9 @@ string readSampleHtml()
 
 
 // creates a new html file with filename and content modified as for filename
-void create_html_file(string filename, string buffer)
+void create_html_file(string foldername, string filename, string buffer)
 {
-    string html_filename = filename + "/" + filename + ".html";
+    string html_filename = foldername + "/" + filename + ".html";
     ofstream html_file(html_filename);
 
     if (!html_file)
@@ -86,9 +91,9 @@ void create_html_file(string filename, string buffer)
     html_file << buffer;
 }
 
-void create_js_file(string filename)
+void create_js_file(string foldername, string filename)
 {
-    string js_filename = filename + "/" + filename + ".js";
+    string js_filename = foldername + "/" + filename + ".js";
     ofstream js_file(js_filename);
     if (!js_file)
     {
@@ -97,10 +102,15 @@ void create_js_file(string filename)
     }
 }
 
-void create_css_file(string filename)
+void create_css_file(string foldername, string filename)
 {
-    string css_filename = filename + "/" + filename + ".css";
+    string css_filename = foldername + "/" + filename + ".css";
     ofstream css_file(css_filename);
+    if (!css_file)
+    {
+        cout << "css file cannot be created" << endl;
+        exit(5);
+    }
 }
 
 // modifies the string to required format that is with title changed and script and stylesheet link changed
