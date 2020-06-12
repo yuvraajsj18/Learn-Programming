@@ -1675,8 +1675,30 @@
 
 
 
-
 </details>
 
 ---
+
+
+
+```python
+# How to create a class in Python
+class Class_Name:
+    pass
+
+class Person:
+    pass
+
+# ------------------------
+
+# How to set an attribute of an object
+
+# bad way - adding attribute to an already instantiated object
+person1 = Person()
+person1.name = "Harry Potter" # bad practice, hard to read, debug.
+# Every object in Python comes with built-in attributes, such as __dict__, which is a dictionary that holds all of the attributes of the object
+
+# appropriate way
+
+```
 
