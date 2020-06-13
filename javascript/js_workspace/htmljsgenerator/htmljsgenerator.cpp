@@ -56,11 +56,11 @@ int main(int argc, char **argv)
 string readSampleHtml()
 {
     ifstream sample_html;
-    sample_html.open("/mnt/DC84407A844058E2/CS/learning_cs/javascript/js_workspace/playground/htmljsgenerator/sample.html");
+    sample_html.open("/mnt/DC84407A844058E2/CS/learning_cs/javascript/js_workspace/htmljsgenerator/sample.html");
 
     if (!sample_html)
     {
-        cout << "File cannot be created" << endl;
+        cout << "File cannot be opened" << endl;
         exit(2);
     }
 
