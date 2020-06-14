@@ -5,9 +5,9 @@
 # represents google chrome browser
 class Chrome:
     # class attributes are declares here, they belong to the class means they are same for all instances
-    NO_OF_WINDOWS = 0
-    connected = True
-    extensions = []
+    __NO_OF_WINDOWS = 0     # private
+    __connected = True      # private
+    _extensions = []        # protected
 
 
     def __init__(self, page = "Home"):  # ctor
@@ -18,7 +18,7 @@ class Chrome:
             self.history = [page]
         self.is_incognito = False
 
-        Chrome.NO_OF_WINDOWS += 1
+        Chrome.__NO_OF_WINDOWS += 1
 
     def navigate(self, new_page = "Home"): # instance method
         self.current_page = new_page
@@ -39,6 +39,9 @@ class Chrome:
     @classmethod
     def add_extension(cls, extension): # class method
         cls.extensions.append(extension)
+
+    def get_extensions(self):
+        return self.extensions;
 
     
 
