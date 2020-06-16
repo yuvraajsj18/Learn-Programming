@@ -28,7 +28,7 @@ class Cheetah(Cat):
 
 class Lion(Cat):
     def __init__(self, mass = 190, lifespan = 14, speed = 80):
-        super()._init__(mass, lifespan, speed)
+        super().__init__(mass, lifespan, speed)
         self.is_social = True
     
     def vocalize(self):
