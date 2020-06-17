@@ -34,6 +34,6 @@ body.addEventListener('click', (e) => {
     sq = document.createElement('div');
     sq.style.width = '50px';
     sq.style.height = '50px';
-    sq.style.background = "#" + String(Math.floor(Math.random() * 255)) + String(Math.floor(Math.random() * 200)) +   String(Math.floor(Math.random() * 100));   
+    sq.style.background = "#" + String(Math.floor(Math.random() * 255)) + "00" +   String(Math.floor(Math.random() * 100));   
     e.target.appendChild(sq);
 });
