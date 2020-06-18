@@ -13,6 +13,11 @@ body {
     overflow: hidden;
 }
 
+.clr
+{
+    clear: both;
+}
+
 #main-header {
     background-color: coral;
     color: white;
@@ -78,6 +83,11 @@ body {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media(max-width: 700px) {
