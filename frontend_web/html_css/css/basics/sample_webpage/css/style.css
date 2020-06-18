@@ -5,12 +5,18 @@ body {
     font-size: 16px;
     line-height: 1.6em;
     margin: 0;
+    position: relative;
+    min-height: 100vh;
 }
 
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+}
+
+#content-wrap {
+    padding-bottom: 7rem;
 }
 
 .clr
@@ -88,9 +94,10 @@ body {
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
+    height: 5rem;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 1000px) {
     #main {
         width: 100%;
         float: none;
