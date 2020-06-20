@@ -105,3 +105,9 @@ nav.header-flex-container {
 #main-menu .menu-item:hover .menu-list {
     display: block;
 }
+
+@media(hover: hover) and (pointer: fine) {
+    #main-menu .menu-item:hover .menu-list {
+        display: block;
+    }
+}
