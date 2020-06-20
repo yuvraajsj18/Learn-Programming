@@ -40,10 +40,11 @@ body {
     font-size: 15px;
 }
 
-
-.header-flex-container {
-    display:flex;
-    justify-content: space-evenly;
+@media(min-width:768px) {
+    .header-flex-container {
+        display:flex;
+        justify-content: space-evenly;
+    }
 }
 
 nav.header-flex-container {
