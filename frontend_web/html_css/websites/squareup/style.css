@@ -148,3 +148,11 @@ main:nth-child(even) {
     font-weight: bold;
     font-size: 16px;
 }
+
+.buy_button:hover {
+    background-color: #065783;
+}
+
+.buy_button:active {
+    background-color: #031a27;
+}
