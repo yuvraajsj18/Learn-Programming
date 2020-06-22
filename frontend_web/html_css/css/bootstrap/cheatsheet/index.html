@@ -37,8 +37,8 @@
         <p class="alert-info">This text is wrapped in a responsive container class that has fixed width for large(lg) and extra large(xl) screens but 100% width for smaller ones</p>
     </div>
 
-    <main class="container-fluid-lg">
-        <div class="row bg-primary">
+    <main class="container-fluid">
+        <div class="row bg-primary overflow-hidden">
             <div class="col border">
                 <h1>This is column 1</h1>
             </div>
@@ -47,6 +47,19 @@
                 <p class="alert-info">This columns are created with .col class. bootstrap will handle the layout</p>
             </div>
             <div class="col border">
+                <h1>This is column 3</h1>
+            </div>
+        </div>
+
+        <div class="row bg-primary">
+            <div class="col-sm border">
+                <h1>This is column 1</h1>
+            </div>
+            <div class="col-sm border">
+                <h1>This is column 2</h1>
+                <p class="alert-info">This columns are created with .col-sm class. They are responsive and we don't need to hide overflow in this case for smaller screen</p>
+            </div>
+            <div class="col-sm border">
                 <h1>This is column 3</h1>
             </div>
         </div>
