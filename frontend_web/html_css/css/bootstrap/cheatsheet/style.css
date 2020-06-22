@@ -4,6 +4,6 @@
     margin: 0px;
 }
 
-body > div {
+body > div, main > div{
     margin-bottom: 10px;
 }

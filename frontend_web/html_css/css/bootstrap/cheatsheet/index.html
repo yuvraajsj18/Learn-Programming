@@ -22,7 +22,8 @@
     
     <div class="container py-3 bg-primary text-white">
         <h1>.container class</h1>
-        <p class="alert-info">This text is wrapped in .container class</p>
+        <p class="alert-info">This text is wrapped in .container class. It will take 100% width in smaller screens devices
+        </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem laboriosam doloremque nulla reiciendis cupiditate?</p>
     </div>
 
@@ -36,49 +37,50 @@
         <p class="alert-info">This text is wrapped in a responsive container class that has fixed width for large(lg) and extra large(xl) screens but 100% width for smaller ones</p>
     </div>
 
-    <div class="row bg-primary">
-        <div class="col border">
-            <h1>This is column 1</h1>
+    <main class="container-fluid-lg">
+        <div class="row bg-primary">
+            <div class="col border">
+                <h1>This is column 1</h1>
+            </div>
+            <div class="col border">
+                <h1>This is column 2</h1>
+                <p class="alert-info">This columns are created with .col class. bootstrap will handle the layout</p>
+            </div>
+            <div class="col border">
+                <h1>This is column 3</h1>
+            </div>
         </div>
-        <div class="col border">
-            <h1>This is column 2</h1>
-            <p class="alert-info">This columns are created with .col class. bootstrap will handle the layout</p>
+    
+        <div class="row bg-primary">
+            <div class="col-sm border">
+                <h1>col-sm</h1>
+            </div>
+            <div class="col-sm border">
+                <h1>col-sm</h1>
+                <p class="alert-info">create responsive columns. This create four equal-width columns starting at tablets and scaling to extra large desktops/p>
+            </div>
+            <div class="col-sm border">
+                <h1>col-sm</h1>
+                <p class="alert-info">On mobile phones or screens that are less than 576px wide, the columns will automatically stack on top of each other</p>
+            </div>
+            <div class="col-sm border">
+                <h1>col-sm</h1>
+            </div>
         </div>
-        <div class="col border">
-            <h1>This is column 3</h1>
+    
+        <div class="row bg-dark text-white">
+            <div class="col-md-3 border">
+                <h1>col-md-3</h1>
+            </div>
+            <div class="col-md-6 border">
+                <h1>col-md-6</h1>
+                <p class="alert-info">This columns starts with medium screen sizes. For smalled screen than that they are stacked together.</p>
+            </div>
+            <div class="col-md-3 border">
+                <h1>col-md-3</h1>
+            </div>
         </div>
-    </div>
-
-    <div class="row bg-primary">
-        <div class="col-sm border">
-            <h1>col-sm</h1>
-        </div>
-        <div class="col-sm border">
-            <h1>col-sm</h1>
-            <p class="alert-info">create responsive columns. This create four equal-width columns starting at tablets and scaling to extra large desktops/p>
-        </div>
-        <div class="col-sm border">
-            <h1>col-sm</h1>
-            <p class="alert-info">On mobile phones or screens that are less than 576px wide, the columns will automatically stack on top of each other</p>
-        </div>
-        <div class="col-sm border">
-            <h1>col-sm</h1>
-        </div>
-    </div>
-
-    <div class="row bg-dark text-white">
-        <div class="col-md-3 border">
-            <h1>col-md-3</h1>
-        </div>
-        <div class="col-md-6 border">
-            <h1>col-md-6</h1>
-            <p class="alert-info">This columns starts with medium screen sizes. For smalled screen than that they are stacked together.</p>
-        </div>
-        <div class="col-md-3 border">
-            <h1>col-md-3</h1>
-        </div>
-    </div>
-
+    </main>
     
 
 </body>
