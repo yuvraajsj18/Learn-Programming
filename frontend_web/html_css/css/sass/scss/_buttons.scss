@@ -1,0 +1,27 @@
+%btn {
+    display: inline;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+    background-color: black;
+    color: white;
+
+    &:hover {
+        transform: scale(.98);
+        background-color: red;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    @include set-background(lighten($primary-color, 10%));
+}
+
+.btn-secondary {
+    @extend %btn;
+    @include set-background($secondary-color);
+    &:hover {
+        background-color: rgb(208, 241, 21);
+        color: black;
+    }
+}
