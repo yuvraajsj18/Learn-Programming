@@ -134,7 +134,7 @@
                 <div class="col-xl border">
                     <h1 class="display-1">Display 1</h1>
                 </div>
-                <div>
+                <div class="mx-auto">
                     <h1 class="display-2">Display 2</h1>
                     <div class="alert-info">Style for bigger headings called displays represented by classes display-1 to display-4</div>
                 </div>
@@ -606,12 +606,15 @@
         </table>
 
         <h3>Small tables</h3>
-        <table class="table table-sm text-left">
+        <table class="table table-responsive-sm table-sm text-left">
             <thead class="thead-dark">
                 <tr>
                     <th>Firstname</th>
                     <th>Lastname</th>
                     <th>Age</th>
+                    <th>House</th>
+                    <th>Quality</th>
+                    <th>Loves</th>
                 </tr>
             </thead>
             <tbody>
@@ -619,22 +622,31 @@
                     <td>Harry</td>
                     <td>Potter</td>
                     <td>11</td>
+                    <td>Griffindor</td>
+                    <td>Bravery</td>
+                    <td>Quiditch</td>
                 </tr>
                 <tr>
                     <td>Ron</td>
                     <td>Wiesley</td>
                     <td>11</td>
+                    <td>Griffindor</td>
+                    <td>Friendship</td>
+                    <td>Chess</td>
                 </tr>
                 <tr>
                     <td>Hermionie</td>
                     <td>Granger</td>
                     <td>11</td>
+                    <td>Griffindor</td>
+                    <td>Clavery</td>
+                    <td>Reading</td>
                 </tr>
             </tbody>
         </table>
 
         <h3>Responsive Table</h3>
-        <table class="table table-responsive table-bordered">
+        <table class="table table-responsive-lg table-bordered">
             <thead>
               <tr>
                 <th>#</th>
@@ -711,6 +723,71 @@
 
         <h3>Fluid Image - Responsive</h3>
         <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="hogwarts image" class="rounded img-fluid">
+    </div>
+
+    <div class="container-fluid">
+        <div class="jumbotron text-center bg-primary text-white">
+            <h1>This is a jumbotron</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At laudantium natus libero corrupti excepturi accusamus?</p>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>This is a full width jumbotron</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vitae illo ex vel, porro alias.</p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <h1>Alerts in bootstrap</h1>
+
+        <div class="alert alert-success">
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+        </div>
+        <div class="alert alert-info">
+            <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+        </div>
+        <div class="alert alert-warning">
+            <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+        </div>
+        <div class="alert alert-danger">
+            <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+        </div>
+          <div class="alert alert-primary">
+            <strong>Primary!</strong> Indicates an important action.
+        </div>
+        <div class="alert alert-secondary">
+            <strong>Secondary!</strong> Indicates a slightly less important action.
+        </div>
+        <div class="alert alert-dark">
+            <strong>Dark!</strong> Dark grey alert.
+        </div>
+        <div class="alert alert-light">
+            <strong>Light!</strong> Light grey alert.
+        </div>
+
+        <h2>Alert Links</h2>
+        <div class="alert alert-success">
+            <strong>Success!</strong> You should <a href="#" class="alert-link">read this message.</a>    
+        </div>
+        <div class="alert alert-info">Add .alert-link class to make link same color as of alert. <a href="https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp" class="alert-link">For more read this.</a></div>
+
+        <h3>Closing Alert</h3>
+        <div class="alert alert-danger alert-dismissible">
+            Close this alert by clicking that cross.
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+        <h3>Animated Alerts</h3>
+        <div class="alert alert-warning alert-dismissible fade show">
+            Close me to see me fading away
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h1>Bootstrap Buttons</h1>
+        
     </div>
 
 </body>
