@@ -18,83 +18,710 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body class="text-center">
+<body>
     
-    <div class="container py-3 bg-primary text-white">
-        <h1>.container class</h1>
-        <p class="alert-info">This text is wrapped in .container class. It will take 100% width in smaller screens devices
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem laboriosam doloremque nulla reiciendis cupiditate?</p>
+    <div class="text-center text-white bg-light">
+        <div class="container py-3 bg-primary text-white">
+            <h1>.container class</h1>
+            <p class="alert-info">This text is wrapped in .container class. It will take 100% width in smaller screens devices
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam autem laboriosam doloremque nulla reiciendis cupiditate?</p>
+        </div>
+    
+        <div class="container-fluid py-3 bg-dark text-light">
+            <h1>.container-fluid class</h1>
+            <p class="alert-info">This text is wrapped .container-fluid class</p>
+        </div>
+    
+        <div class="container-lg py-3 bg-secondary">
+            <h1>.container-lg class</h1>
+            <p class="alert-info">This text is wrapped in a responsive container class that has fixed width for large(lg) and extra large(xl) screens but 100% width for smaller ones</p>
+        </div>
+    
+        <div class="container-fluid text-white">
+            <div class="row bg-primary mb-0">
+                <div class="col">
+                    <h1>Bootstrap grid</h1>
+                </div>
+            </div>
+            <div class="row bg-secondary overflow-hidden">
+                <div class="col border">
+                    <h1>This is column 1</h1>
+                </div>
+                <div class="col border">
+                    <h1>This is column 2</h1>
+                    <p class="alert-info">This columns are created with .col class. bootstrap will handle the layout</p>
+                </div>
+                <div class="col border">
+                    <h1>This is column 3</h1>
+                </div>
+            </div>
+    
+            <div class="row bg-dark">
+                <div class="col-sm border">
+                    <h1>This is column 1</h1>
+                </div>
+                <div class="col-sm border">
+                    <h1>This is column 2</h1>
+                    <p class="alert-info">This columns are created with .col-sm class. They are responsive and we don't need to hide overflow in this case for smaller screen</p>
+                </div>
+                <div class="col-sm border">
+                    <h1>This is column 3</h1>
+                </div>
+            </div>
+        
+            <div class="row bg-secondary">
+                <div class="col-sm border">
+                    <h1>col-sm</h1>
+                </div>
+                <div class="col-sm border">
+                    <h1>col-sm</h1>
+                    <p class="alert-info">create responsive columns. This create four equal-width columns starting at tablets and scaling to extra large desktops/p>
+                </div>
+                <div class="col-sm border">
+                    <h1>col-sm</h1>
+                    <p class="alert-info">On mobile phones or screens that are less than 576px wide, the columns will automatically stack on top of each other</p>
+                </div>
+                <div class="col-sm border">
+                    <h1>col-sm</h1>
+                </div>
+            </div>
+        
+            <div class="row bg-dark">
+                <div class="col-md-3 border">
+                    <h1>col-md-3</h1>
+                </div>
+                <div class="col-md-6 border">
+                    <h1>col-md-6</h1>
+                    <p class="alert-info">This columns starts with medium screen sizes. For smalled screen than that they are stacked together.</p>
+                </div>
+                <div class="col-md-3 border">
+                    <h1>col-md-3</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid text-white">
+            <div class="row bg-primary mb-0">
+                <div class="col-md">
+                    <h1 class="display-4">Text/Typography</h1>
+                </div>
+            </div>
+    
+            <div class="row bg-secondary">
+                <div class="col-lg border">
+                    <h1>Heading 1</h1>
+                </div>
+                <div class="col-lg border">
+                    <h2>Heading 2</h2>
+                </div>
+                <div class="col-lg border">
+                    <h3>Heading 3</h3>
+                    <div class="alert-info">styles for h1 to h6</div>
+                </div>
+                <div class="col-lg border">
+                    <h4>Heading 4</h4>
+                </div>
+                <div class="col-lg border">
+                    <h5>Heading 5</h5>
+                </div>
+                <div class="col-lg border">
+                    <h6>Heading 6</h6>
+                </div>
+            </div>
+    
+            <div class="row bg-dark">
+                <div class="col-xl border">
+                    <h1 class="display-1">Display 1</h1>
+                </div>
+                <div class="col-xl <h2>Contextual Backgrounds</h2>
+                    <p>Use the contextual background classes to provide "meaning through colors".</p>
+                    <p>Note that you can also add a .text-* class if you want a different text color:</p>
+                    <p class="bg-primary text-white">This text is important.</p>
+                    <p class="bg-success text-white">This text indicates success.</p>
+                    <p class="bg-info text-white">This text represents some information.</p>
+                    <p class="bg-warning text-white">This text represents a warning.</p>
+                    <p class="bg-danger text-white">This text represents danger.</p>
+                    <p class="bg-secondary text-white">Secondary background color.</p>
+                    <p class="bg-dark text-white">Dark grey background color.</p>
+                    <p class="bg-light text-dark">Light grey background color.</p>border">
+                    <h1 class="display-2">Display 2</h1>
+                    <div class="alert-info">Style for bigger headings called displays represented by classes display-1 to display-4</div>
+                </div>
+                <div class="col-xl border">
+                    <h1 class="display-3">Display 3</h1>
+                </div>
+                <div class="col-xl border">
+                    <h1 class="display-4">Display 4</h1>
+                </div>
+            </div>
+    
+            <div class="row bg-secondary">
+                <div class="col">
+                    <div class="alert-info">Style for small tag used with headings to create a lighter secondary text</div>
+                    <h1>h1 heading <small>secondary text</small></h1>
+                    <h2>h2 heading <small>secondary text</small></h2>
+                    <h3>h3 heading <small>secondary text</small></h3>
+                    <h4>h4 heading <small>secondary text</small></h4>
+                    <h5>h5 heading <small>secondary text</small></h5>
+                    <h6>h6 heading <small>secondary text</small></h6>
+                    <h1 class="display-1">Display 1 <small>secondary text</small></h1>
+                </div>
+            </div>
+    
+            <div class="row bg-dark">
+                <div class="col-lg border">
+                    <p>This is a text with <mark>mark tag</mark></p>
+                </div>
+                <div class="col-lg border">
+                    <p>This is a text with <abbr title="abbreviation">abbr tag</abbr></p>
+                </div>
+                <div class="col-lg border">
+                    <blockquote class="blockquote">
+                        <p>This is a blockquote tag text</p>
+                        <footer class="blockquote-footer">
+                            This is blockquote footer
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="col-lg align-self-center alert-warning">
+                    <a href="https://www.w3schools.com/bootstrap4/bootstrap_typography.asp">
+                        For more info see this
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="container-fluid">
+            <div class="row bg-primary mb-0">
+                <div class="col-sm">
+                    <h1 class="display-4">
+                        Bootstrap Colors
+                    </h1>
+                </div>
+            </div>
+            <div class="row" style="background-color: #025054;">
+                <div class="col-sm">
+                    <h2>Contextual Colors</h2>
+                    <p>Use the contextual classes to provide "meaning through colors":</p>
+                    <p class="text-muted">This text is muted.</p>
+                    <p class="text-primary">This text is important.</p>
+                    <p class="text-success">This text indicates success.</p>
+                    <p class="text-info">This text represents some information.</p>
+                    <p class="text-warning">This text represents a warning.</p>
+                    <p class="text-danger">This text represents danger.</p>
+                    <p class="text-secondary">Secondary text.</p>
+                    <p class="text-dark">This text is dark grey.</p>
+                    <p class="text-body">Default body color (often black).</p>
+                    <p class="text-light">This text is light grey.</p>
+                    <p class="text-white">This text is white</p>
+                </div>
+            </div>
+            <div class="row" style="background-color: #025054;">
+                <div class="col-sm">
+                    <h2>Contextual Link Colors</h2>
+                    <p>Hover over the links.</p>
+                    <a href="#" class="text-muted">Muted link.</a>
+                    <a href="#" class="text-primary">Primary link.</a>
+                    <a href="#" class="text-success">Success link.</a>
+                    <a href="#" class="text-info">Info link.</a>
+                    <a href="#" class="text-warning">Warning link.</a>
+                    <a href="#" class="text-danger">Danger link.</a>
+                    <a href="#" class="text-secondary">Secondary link.</a>
+                    <a href="#" class="text-dark">Dark grey link.</a>
+                    <a href="#" class="text-body">Body/black link.</a>
+                    <a href="#" class="text-light">Light grey link.</a>
+                </div>
+            </div>
+            <div class="row" style="background-color: #025054;">
+                <div class="col-sm">
+                    <h2>Contextual Backgrounds</h2>
+                    <p>Use the contextual background classes to provide "meaning through colors".</p>
+                    <p>Note that you can also add a .text-* class if you want a different text color:</p>
+                    <p class="bg-primary text-white">This text is important.</p>
+                    <p class="bg-success text-white">This text indicates success.</p>
+                    <p class="bg-info text-white">This text represents some information.</p>
+                    <p class="bg-warning text-white">This text represents a warning.</p>
+                    <p class="bg-danger text-white">This text represents danger.</p>
+                    <p class="bg-secondary text-white">Secondary background color.</p>
+                    <p class="bg-dark text-white">Dark grey background color.</p>
+                    <p class="bg-light text-dark">Light grey background color.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container-fluid py-3 bg-dark text-light">
-        <h1>.container-fluid class</h1>
-        <p class="alert-info">This text is wrapped .container-fluid class</p>
+    <div class="container-fluid bg-white text-dark">
+        
+        <h1 class="display-4">Bootstrap Tables</h1>
+        <h3>Basic Table</h3>
+        <table class="table text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Striped Table</h3>
+        <table class="table table-striped text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+    <h3>Bordered Table</h3>
+        <table class="table table-bordered text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Bordered Striped Table</h3>
+        <table class="table table-bordered table-striped text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Hover row tables</h3>
+        <table class="table table-hover text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Dark Table</h3>
+        <table class="table table-dark text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Dark Striped Bordered Table</h3>
+        <table class="table table-bordered table-dark table-striped text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Dark Hoverable Table</h3>
+        <table class="table table-dark table-hover text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Borderedless Table</h3>
+        <table class="table table-borderless text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Contextual Tables</h3>
+        <table class="table table-bordered text-left">
+            <thead>
+                <tr class="table-info">
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td class="table-success">Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover table-success table-bordered text-left">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active">
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Table head colors</h3>
+        <table class="table text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table text-left">
+            <thead class="thead-light">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Small tables</h3>
+        <table class="table table-sm text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry</td>
+                    <td>Potter</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ron</td>
+                    <td>Wiesley</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Hermionie</td>
+                    <td>Granger</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Responsive Table</h3>
+        <table class="table table-responsive table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Sex</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Anna</td>
+                <td>Pitt</td>
+                <td>35</td>
+                <td>New York</td>
+                <td>USA</td>
+                <td>Female</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 
-    <div class="container-lg py-3 bg-secondary">
-        <h1>.container-lg class</h1>
-        <p class="alert-info">This text is wrapped in a responsive container class that has fixed width for large(lg) and extra large(xl) screens but 100% width for smaller ones</p>
+    <div class="container-fluid">
+        <h1 class="display-4 text-center">Bootstrap Images</h1>
+        <div class="row">
+            <div class="col-md">
+                <h3>Rounded Corner Images</h3>
+                <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="Hogwarts photo" width="100%" class="rounded">
+            </div>
+            <div class="col-md">
+                <h3>Circle Images</h3>
+                <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="Hogwarts photo" width = "100%" class="rounded-circle">
+            </div>
+            <div class="col-md">
+                <h3>Thumbnail Images</h3>
+                <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="Hogwarts photo" width = "100%" class="img-thumbnail">
+            </div>
+        </div>
+        <h3>Aligned Image</h3>
+        <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="Hogwarts photo" width = "30%" class="float-left">
+        <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="Hogwarts photo" width="30%" class="float-right">
+
+        <div style="clear: both;"></div>
+
+        <h3 class="text-center">Centered Image</h3>
+        <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="hogwarts photo" width="30%" class="mx-auto d-block">
+
+        <h3 class="text-center">Fluid Image - Responsive</h3>
+        <img src="https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg?fm=jpg" alt="hogwarts image" class="rounded img-fluid">
     </div>
-
-    <main class="container-fluid">
-        <div class="row bg-primary overflow-hidden">
-            <div class="col border">
-                <h1>This is column 1</h1>
-            </div>
-            <div class="col border">
-                <h1>This is column 2</h1>
-                <p class="alert-info">This columns are created with .col class. bootstrap will handle the layout</p>
-            </div>
-            <div class="col border">
-                <h1>This is column 3</h1>
-            </div>
-        </div>
-
-        <div class="row bg-primary">
-            <div class="col-sm border">
-                <h1>This is column 1</h1>
-            </div>
-            <div class="col-sm border">
-                <h1>This is column 2</h1>
-                <p class="alert-info">This columns are created with .col-sm class. They are responsive and we don't need to hide overflow in this case for smaller screen</p>
-            </div>
-            <div class="col-sm border">
-                <h1>This is column 3</h1>
-            </div>
-        </div>
-    
-        <div class="row bg-primary">
-            <div class="col-sm border">
-                <h1>col-sm</h1>
-            </div>
-            <div class="col-sm border">
-                <h1>col-sm</h1>
-                <p class="alert-info">create responsive columns. This create four equal-width columns starting at tablets and scaling to extra large desktops/p>
-            </div>
-            <div class="col-sm border">
-                <h1>col-sm</h1>
-                <p class="alert-info">On mobile phones or screens that are less than 576px wide, the columns will automatically stack on top of each other</p>
-            </div>
-            <div class="col-sm border">
-                <h1>col-sm</h1>
-            </div>
-        </div>
-    
-        <div class="row bg-dark text-white">
-            <div class="col-md-3 border">
-                <h1>col-md-3</h1>
-            </div>
-            <div class="col-md-6 border">
-                <h1>col-md-6</h1>
-                <p class="alert-info">This columns starts with medium screen sizes. For smalled screen than that they are stacked together.</p>
-            </div>
-            <div class="col-md-3 border">
-                <h1>col-md-3</h1>
-            </div>
-        </div>
-    </main>
-    
 
 </body>
 </html>
