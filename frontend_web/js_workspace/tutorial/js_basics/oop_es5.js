@@ -18,7 +18,7 @@ function Person(firstName, lastName, dob)   // ctor function
 // prototypes
 Person.prototype.getBirthYear = function() {
     return this.dob.getFullYear();
-}
+}ww
 
 Person.prototype.getFullName = function() {
     return `${this.firstName} ${this.lastName}`;
