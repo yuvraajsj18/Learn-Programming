@@ -37,6 +37,13 @@
         </form>
 
         <ul id="task-list" class="list-group pb-3 list-group-flush text-break">
+            <!-- <li class="list-group-item d-flex justify-content-between">
+                Example Task
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="done-btn" id="done">
+                    <label class="custom-control-label" for="done"></label>
+                </div>
+            </li> -->
         </ul>
 
     </div>
@@ -46,6 +53,7 @@
         const task = document.querySelector('#task');
         const form = document.querySelector('form');
         const list = document.querySelector('#task-list');
+        let number_of_tasks = 0;
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -55,19 +63,30 @@
                 return;
             }
 
+            number_of_tasks++;
+
             const item = document.createElement('li');
             item.classList.add('list-group-item', 'd-flex', 'justify-content-between');
             item.innerText = task.value;
 
-            const done_btn = document.createElement('button');
-            done_btn.classList.add('done-btn','btn', 'p-0');
-            done_btn.innerHTML = "<span class = 'badge badge-success material-icons'>done</span>"
-            done_btn.addEventListener('click', (e) => {
-                parent_list_item = done_btn.parentElement;
-                parent_list_item.remove();
-            });
+            const done_div = document.createElement('div');
+            done_div.classList.add('custom-control', 'custom-checkbox');
 
-            item.appendChild(done_btn);
+            const done_checkbox = document.createElement('input');
+            const done_id = `done${number_of_tasks}`;
+            done_checkbox.setAttribute('type', 'checkbox');
+            done_checkbox.setAttribute('name', 'done-btn');
+            done_checkbox.setAttribute('id', done_id)
+            done_checkbox.classList.add('custom-control-input');
+
+            const done_label = document.createElement('label');
+            done_label.classList.add('custom-control-label');
+            done_label.setAttribute('for', done_id);
+
+            done_div.appendChild(done_checkbox);
+            done_div.appendChild(done_label);
+
+            item.appendChild(done_div);
 
             list.appendChild(item);
 
