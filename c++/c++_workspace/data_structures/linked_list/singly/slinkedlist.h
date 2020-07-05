@@ -3,7 +3,8 @@
 
 
 /**
- *  node represents a node in the linked list that contains the data stored at the location and a pointer to the next node in the list.
+ *  node represents a node in the linked list that contains the data stored at the location 
+ *  and a pointer to the next node in the list.
  */
 template <typename type>
 struct node
@@ -24,8 +25,6 @@ class slist
 
         slist();
         ~slist();
-
-
 
 };
 
