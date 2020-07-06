@@ -37,7 +37,8 @@
 ehthumbs.db
 Thumbs.db
 
-# folders that are not needed like colleges
+# folders
 college/
 cpusim/
 books/
+.ipynb_checkpoints/
