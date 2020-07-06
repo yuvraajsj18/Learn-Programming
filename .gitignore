@@ -37,9 +37,12 @@
 ehthumbs.db
 Thumbs.db
 
-# folders
+# custom
 college/
 cpusim/
 books/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
+
+*-checkpoints.ipynb
+classes-checkpoint.ipynbs
