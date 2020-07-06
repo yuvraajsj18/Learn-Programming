@@ -63,7 +63,7 @@
                 return;
             }
 
-            number_of_tasks++;
+            number_of_tasks++; 
 
             const item = document.createElement('li');
             item.classList.add('list-group-item', 'd-flex', 'justify-content-between');
@@ -78,6 +78,17 @@
             done_checkbox.setAttribute('name', 'done-btn');
             done_checkbox.setAttribute('id', done_id)
             done_checkbox.classList.add('custom-control-input');
+
+            done_checkbox.addEventListener('click', (e) => {
+                if (item.style.textDecoration == 'line-through') {
+                    item.style.textDecoration = 'none';
+                    item.classList.remove('list-group-item-success');
+                }
+                else {
+                    item.style.textDecoration = "line-through";
+                    item.classList.add('list-group-item-success');
+                }
+            });
 
             const done_label = document.createElement('label');
             done_label.classList.add('custom-control-label');
