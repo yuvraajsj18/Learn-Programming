@@ -41,3 +41,5 @@ Thumbs.db
 college/
 cpusim/
 books/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
