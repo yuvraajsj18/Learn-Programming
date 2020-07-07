@@ -16,11 +16,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <style>
-        @media(min-width:536px)
-        {
+        body {
+            background-color: #343a40;
+        }
+        @media(min-width:536px) {
             #add-btn:hover {
                 border-radius: 30px;
             }
+        }
+        .done-label::before {
+            border: 2px solid #28a745;
         }
     </style>
 </head>
@@ -101,14 +106,23 @@
             });
 
             const done_label = document.createElement('label');
-            done_label.classList.add('custom-control-label');
+            done_label.classList.add('custom-control-label', 'done-label');
             done_label.setAttribute('for', done_id);
+
+            const remove_item = document.createElement('span');
+            remove_item.classList.add('material-icons');
+            remove_item.style.fontSize = "22px";
+            remove_item.style.color = "red";
+            remove_item.style.cursor = "pointer";
+            remove_item.innerText = 'remove_circle_outlined';
+
+            remove_item.addEventListener('click', (e) => item.remove());
 
             done_div.appendChild(done_checkbox);
             done_div.appendChild(done_label);
+            done_div.appendChild(remove_item);
 
             item.appendChild(done_div);
- 
             list.appendChild(item);
 
             task.value = "";
