@@ -1,14 +1,23 @@
 body {
-    background-color: #343a40;
+    background-color: #232946;
+}
+
+header {
+    background-color: #b8c1ec;
+}
+
+#add-btn {
+    background-color: #eebbc3 !important;
 }
 
 #todo-form {
     max-width: 400px;
 }
 
-
-.done-label::before {
-    border: 2px solid #28a745;
+.list-group-item {
+    word-break: break-all;
+    background-color: #fffffe;
+    color: #121629;
 }
 
 .remove-btn, .done-label {
@@ -17,7 +26,11 @@ body {
 
 .remove-btn {
     font-size: 22px;
-    padding-top: ;
+    padding-top: 1px;
+}
+
+.done-label::before {
+    border: 2px solid #28a745;
 }
 
 @media(min-width:536px) {

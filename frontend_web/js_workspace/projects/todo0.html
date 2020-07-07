@@ -37,11 +37,11 @@
 
         <h1 class="text-center">Todo App</h1>
 
-        <form class="m-auto pt-3 needs-validation" style = "max-width: 400px;" novalidate>
+        <form class="m-auto pt-3" style = "max-width: 400px;" novalidate>
 
             <div class="input-group form-group">
                 <div class="input-group-prepend">
-                    <label class="lead input-group-text" for="task">Task: </label>
+                    <label class="input-group-text" for="task">Task: </label>
                 </div>
                 <input type="text" pattern="^(?!\s*$).+" class="form-control" name="task" id="task" required>
                 <div class="invalid-feedback">Please Enter Task.</div>
@@ -53,8 +53,8 @@
             </div>            
         </form>
 
-        <ul id="task-list" class="list-group pb-3 list-group-flush text-break">
-            <!-- <li class="list-group-item d-flexe justify-content-between">
+        <ul id="todo-list" class="list-group pb-3 list-group-flush">
+            <!-- <li class="list-group-item d-flex justify-content-between">
                 Example Task
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" name="done-btn" id="done">
@@ -69,13 +69,9 @@
 
         const task = document.querySelector('#task');
         const form = document.querySelector('form');
-        const list = document.querySelector('#task-list');
+        const list = document.querySelector('#todo-list');
 
         let number_of_tasks = 0;
-        // if(localStorage.getItem('number_of_tasks'))
-        // {
-        //     number_of_tasks = Number(localStorage.getItem('number_of_tasks'));
-        // }
 
         let tasks_array = new Array();
         if (localStorage.getItem('tasks_array'))
@@ -109,6 +105,7 @@
             number_of_tasks++; 
             const item = document.createElement('li');
             item.classList.add('list-group-item', 'd-flex', 'justify-content-between');
+            item.style.wordBreak = "break-all"
             item.id = `item-${number_of_tasks}`;
             item.innerText = task;
 
@@ -147,7 +144,7 @@
             remove_item.style.width = "10px";
 
             remove_item.addEventListener('click', (e) => {
-                item.style.setProperty('--animate-duration', '0.5s');
+                item.style.setProperty('--animate-duration', '0.3s');
                 item.classList.add('animate__animated','animate__fadeOutDown');
                 item.addEventListener('animationend', removeItem);
 
