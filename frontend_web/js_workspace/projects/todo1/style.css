@@ -1,0 +1,27 @@
+body {
+    background-color: #343a40;
+}
+
+#todo-form {
+    max-width: 400px;
+}
+
+
+.done-label::before {
+    border: 2px solid #28a745;
+}
+
+.remove-btn, .done-label {
+    cursor: pointer;
+}
+
+.remove-btn {
+    font-size: 22px;
+    padding-top: ;
+}
+
+@media(min-width:536px) {
+    #add-btn:hover {
+        border-radius: 30px;
+    }
+}
