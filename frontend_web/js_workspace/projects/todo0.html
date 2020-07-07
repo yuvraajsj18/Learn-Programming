@@ -72,10 +72,10 @@
         const list = document.querySelector('#task-list');
 
         let number_of_tasks = 0;
-        if(localStorage.getItem('number_of_tasks'))
-        {
-            number_of_tasks = Number(localStorage.getItem('number_of_tasks'));
-        }
+        // if(localStorage.getItem('number_of_tasks'))
+        // {
+        //     number_of_tasks = Number(localStorage.getItem('number_of_tasks'));
+        // }
 
         let tasks_array = new Array();
         if (localStorage.getItem('tasks_array'))
@@ -94,10 +94,9 @@
                 return;
             }
 
-            number_of_tasks++; 
             tasks_array.push(task.value);
             localStorage.setItem('tasks_array', tasks_array);
-            localStorage.setItem('number_of_tasks', number_of_tasks);
+            // localStorage.setItem('number_of_tasks', number_of_tasks);
 
             addItem(task.value);
 
@@ -107,6 +106,7 @@
 
 
         function addItem(task) {
+            number_of_tasks++; 
             const item = document.createElement('li');
             item.classList.add('list-group-item', 'd-flex', 'justify-content-between');
             item.id = `item-${number_of_tasks}`;
