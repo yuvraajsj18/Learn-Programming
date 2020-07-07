@@ -70,7 +70,21 @@
         const task = document.querySelector('#task');
         const form = document.querySelector('form');
         const list = document.querySelector('#task-list');
+
         let number_of_tasks = 0;
+        if(localStorage.getItem('number_of_tasks'))
+        {
+            number_of_tasks = Number(localStorage.getItem('number_of_tasks'));
+        }
+
+        let tasks_array = new Array();
+        if (localStorage.getItem('tasks_array'))
+        {
+            tasks_array = (localStorage.getItem('tasks_array').split(","));
+            tasks_array.forEach((task) => {
+                addItem(task);
+            });
+        }
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -81,11 +95,22 @@
             }
 
             number_of_tasks++; 
+            tasks_array.push(task.value);
+            localStorage.setItem('tasks_array', tasks_array);
+            localStorage.setItem('number_of_tasks', number_of_tasks);
 
+            addItem(task.value);
+
+            task.value = "";
+            form.classList.remove('was-validated');
+        });
+
+
+        function addItem(task) {
             const item = document.createElement('li');
             item.classList.add('list-group-item', 'd-flex', 'justify-content-between');
             item.id = `item-${number_of_tasks}`;
-            item.innerText = task.value;
+            item.innerText = task;
 
             const done_div = document.createElement('div');
             done_div.classList.add('custom-control', 'custom-checkbox');
@@ -111,6 +136,7 @@
             const done_label = document.createElement('label');
             done_label.classList.add('custom-control-label', 'done-label');
             done_label.setAttribute('for', done_id);
+            done_label.style.cursor = "pointer";
 
             const remove_item = document.createElement('span');
             remove_item.classList.add('material-icons');
@@ -123,7 +149,14 @@
             remove_item.addEventListener('click', (e) => {
                 item.style.setProperty('--animate-duration', '0.5s');
                 item.classList.add('animate__animated','animate__fadeOutDown');
-                item.addEventListener('animationend', () => item.remove());
+                item.addEventListener('animationend', removeItem);
+
+                function removeItem() {
+                    index_of_item = tasks_array.indexOf(task);
+                    tasks_array.splice(index_of_item, 1);
+                    localStorage.setItem('tasks_array', tasks_array);
+                    item.remove();
+                }
                 // item.remove();
             });
 
@@ -133,10 +166,7 @@
 
             item.appendChild(done_div);
             list.appendChild(item);
-
-            task.value = "";
-            form.classList.remove('was-validated');
-        });
+        }
     </script>
 
 </body>
