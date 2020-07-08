@@ -7,17 +7,19 @@ header {
 }
 
 #add-btn {
-    background-color: #eebbc3 !important;
+    background-color: #B6ECC8 !important;
 }
 
 #todo-form {
-    max-width: 400px;
+    max-width: 600px;
+}
+
+.todo-list-item {
+    --animate-duration: 0.3s;
 }
 
 .list-group-item {
     word-break: break-all;
-    background-color: #fffffe;
-    color: #121629;
 }
 
 .remove-btn, .done-label {
@@ -27,6 +29,7 @@ header {
 .remove-btn {
     font-size: 22px;
     padding-top: 1px;
+    width: 10px;
 }
 
 .done-label::before {

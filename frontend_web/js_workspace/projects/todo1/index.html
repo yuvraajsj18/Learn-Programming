@@ -47,14 +47,14 @@
                 <div class="input-group-prepend">
                     <label for="task-input" class="font-weight-bold input-group-text">Task: </label>
                 </div>
-                <input type="text" pattern="^(?!\s*$).+" class="form-control rounded-right" name="task" id="task-input">
+                <input type="text" pattern="^(?!\s*$).+" class="form-control form-control-lg rounded-right" name="task" id="task-input">
                 <div class="invalid-feedback" id="task-invalid-feedback">Please Enter Task.</div>
                 <div class="valid-feedback" id="task-valid-feedback">Now, you got it.</div>
 
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-block" id="add-btn">Add</button>
+                <button type="submit" class="btn btn-block btn-lg font-weight-bold" id="add-btn">Add</button>
             </div>
 
         </form>
@@ -64,7 +64,8 @@
     <main class="container">
 
         <ul id="todo-list" class="list-group pb-3 list-group-flush">
-            <li class="list-group-item rounded-lg todo-list-item d-flex align-items-center justify-content-between animate__animated animate__fadeInDown">
+            <!--This li elements are for testing and design purpose-->
+            <!-- <li class="list-group-item rounded-lg todo-list-item mb-3 d-flex align-items-center justify-content-between animate__animated animate__fadeInDown">
                 
                 <span class="todo-list-task lead">
                     Example Task
@@ -72,13 +73,28 @@
                 
                 <div class="controls">
                     <div class="custom-control d-inline custom-checkbox">
-                        <input type="checkbox" class="custom-control-input done-checkbox" name="done-btn" id="done">
-                        <label class="custom-control-label done-label" for="done"></label>
+                        <input type="checkbox" class="custom-control-input done-checkbox" name="done-btn" id="done-a">
+                        <label class="custom-control-label done-label" for="done-a"></label>
                     </div>
 
                     <span class="material-icons text-danger remove-btn">remove_circle_outline</span>
                 </div>
             </li>
+            <li class="list-group-item list-group-item-success rounded-lg todo-list-item mb-3 d-flex align-items-center justify-content-between animate__animated animate__fadeInDown">
+                
+                <span class="todo-list-task lead">
+                    Example Task
+                </span>
+                
+                <div class="controls">
+                    <div class="custom-control d-inline custom-checkbox">
+                        <input type="checkbox" class="custom-control-input done-checkbox" name="done-btn" id="done-b">
+                        <label class="custom-control-label done-label" for="done-b"></label>
+                    </div>
+
+                    <span class="material-icons text-danger remove-btn">remove_circle_outline</span>
+                </div>
+            </li> -->
         </ul>
 
     </main>
@@ -87,4 +103,4 @@
 
 </body>
 
-</html>animate__fadeInDown
+</html>
