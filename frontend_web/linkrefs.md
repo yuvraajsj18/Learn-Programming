@@ -6,4 +6,5 @@
 - [dom's basic](./js_workspace/tutorial/js_basics/basic_dom/index.html)
 - [squareup page](./html_css/websites/squareup/index.html)
 - [bootstrap ref page](./html_css/css/bootstrap/cheatsheet/index.html)
-- [stupid todo app](./js_workspace/projects/todo0.html)
+- [todo0 app](./js_workspace/projects/todo0.html)
+- [todo with classes] (./js_workspace/projects/todo1/index.html)
