@@ -7,4 +7,4 @@
 - [squareup page](./html_css/websites/squareup/index.html)
 - [bootstrap ref page](./html_css/css/bootstrap/cheatsheet/index.html)
 - [todo0 app](./js_workspace/projects/todo0.html)
-- [todo with classes] (./js_workspace/projects/todo1/index.html)
+- [todo with classes](./js_workspace/projects/todo1/index.html)
