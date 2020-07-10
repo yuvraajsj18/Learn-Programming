@@ -75,7 +75,7 @@ a:active {
     padding-right: 20px; */
     /* Same as above */
     padding: 20px;
-
+    /mnt/DC84407A844058E2/CS/learning_cs/frontend_web/html_css/css/basics/sample_webpage/index.html
     margin-top: 20px;
     margin: 20px 0;
 }
@@ -85,7 +85,7 @@ a:active {
     font-weight: 800;
     font-style: italic;
     text-decoration: underline;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 0.2em;
     word-spacing: 1em;
 }
