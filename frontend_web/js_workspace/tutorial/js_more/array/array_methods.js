@@ -21,6 +21,10 @@ const companies= [
   // companies.forEach(function(company) {
   //   console.log(company.name);
   // });
+
+  companies.forEach((company) => {
+    console.log(company.name)
+  })
   
   // filter
   
@@ -127,5 +131,5 @@ const companies= [
     .sort((a, b) => a - b)
     .reduce((a, b) => a + b, 0);
   
-  console.log(combined);
+  // console.log(combined);
   
