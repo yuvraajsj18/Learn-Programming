@@ -1,8 +1,0 @@
-*   You can not initialise an array in function parameter like 
-    # Set(int arr[] = {0}, int size = 10)
-    {0} is not the address but arr[] is a pointer
-    either you need to declare another array in visible(like global) scope and then give its address
-    # int def[100] = {0};
-    # Set(int arr[] = def, int size = 10)
-    or set it as NULL
-    # Set(int arr[] = NULL, int size = 0)
