@@ -1,0 +1,42 @@
+"""
+    Execution of expressions involving arithmetic, relational, logical, and bitwise operators 
+    in the shell window of Python IDLE.
+"""
+
+
+>>> 1 + 2
+3
+
+>>> 10 / 2
+5.0
+
+>>> 10 // 2
+5
+
+>>> 50 * 50
+2500
+
+>>> 2 ** 3
+8
+
+>>> 30 < 31
+True
+
+>>> 30 > 31
+False
+
+>>> not True
+False
+
+>>> not ""
+True
+
+>>> 10 | 10
+10
+
+>>> 10 | 11
+11
+
+
+>>> 10 >> 2
+2
