@@ -86,7 +86,7 @@ def print_squares(start, end):
 for n in print_squares(2, 5):
     print(n)
 
-
+w
 # Generator Expressions
 # like list comprehensions but with round brackets
 # only one iteration allowed then will get exhausted
