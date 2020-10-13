@@ -1,0 +1,138 @@
+Enter names of student separated by a space: Harry Hermione Ron Luna Draco Neville
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 1
+Enter a name of student to search: Harry
+Student found at index:  0
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 1
+Enter a name of student to search: Black
+Student not found.
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 2
+Enter a name of student to search: Luna
+Student found at index:  3
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 5
+List of sorted students with bubble sort:
+Draco Harry Hermione Luna Neville Ron 
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 6
+List of sorted students with selection sort:
+Draco Harry Hermione Luna Neville Ron 
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 7
+List of sorted students with insertion sort:
+Draco Harry Hermione Luna Neville Ron 
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 3
+Enter a name of student to search: Hermione
+Student found at index:  2
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 4
+Enter a name of student to search: Not here
+Student not found.
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 4
+Enter a name of student to search: Ron
+Student found at index:  5
+
+            Choose an option:
+            1. Linear Search - Iterative
+            2. Linear Search - Recursive
+            3. Binary Search - Iterative
+            4. Binary Search - Recursive
+            5. Bubble Sort
+            6. Selection Sort
+            7. Insertion Sort
+            8. Exit
+        
+Choice[1-8]: 8
+Exiting...

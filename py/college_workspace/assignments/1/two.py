@@ -21,15 +21,16 @@ Sample Output:
 """
 
 def sorting_criteria(element):
-    # Low number means high priority
+    """Sorting criteria for given sorting requirement in the problem"""
     priority = {
+        # NOTE: Low number means high priority
         'lower': 1,
         'upper': 2,
         'odd': 3,
         'even': 4,
     }
     if element.islower():
-        return priority['lower'], element   # returing a tuple for default sorting when same priority
+        return priority['lower'], element   # NOTE: returing a tuple for default sorting when same priority
     elif element.isupper():
         return priority['upper'], element
     elif element.isdigit() and int(element) & 1:
@@ -48,6 +49,7 @@ def sort_alphanumeric(string:str) -> str:
 
 def main():
     string = input("Enter a string: ")
+
     sorted_string = sort_alphanumeric(string)
 
     print("Sorted string is", sorted_string)
