@@ -1,18 +1,17 @@
 // A variadic function for print implementation
 
 #include <iostream>
-using namespace std;
 
 template <typename First>
 void print(First first)
 {
-    cout << first << endl;
+    std::cout << first << "\n";
 }
 
 template <typename First, typename ... Types>
-void print(First first, Types ...args)
+void print(First first, Types ... args)
 {
-    cout << first << " ";
+    std::cout << first << " ";
     print(args...);
 }
 
