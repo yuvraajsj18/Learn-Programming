@@ -1,15 +1,3 @@
-templates
-
-auto
-
-variadic
-
-stl
-
-range based for loop
-
-lambda
-
 # Modern C++ Features
 
 C++ is not just C with classes, it is very powerful language that comes with many features that are provided by languages like Python and JavaScript.

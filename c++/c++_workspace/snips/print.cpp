@@ -9,7 +9,7 @@ void print(First first)
 }
 
 template <typename First, typename ... Types>
-void print(First first, Types ... args)
+void print(First first, Types ...args)
 {
     std::cout << first << " ";
     print(args...);
