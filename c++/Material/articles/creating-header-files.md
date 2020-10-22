@@ -59,6 +59,8 @@ Header Guards look like this -
 #endif
 ```
 
+`ifndef` means if not defined, if the HEADERFILE_H is not defined it will define it, otherwise if it is already defined it will skip compiling everything between `ifndef` and `endif`.
+
 *Now, we will update our previous example with header guards*
 
 - `first.h`

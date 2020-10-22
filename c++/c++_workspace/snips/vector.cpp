@@ -1,80 +1,35 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-using namespace std;
 
 int main()
 {
-    vector<int> list;
-    list.push_back(1);
-    list.push_back(2);
-    list.push_back(3);
+    std::vector<int> numbers{1, 2, 3, 4, 5};
 
-    for (int i : list)
-    {
-        cout << i << endl;
-    }
+    for (int i = 0; i < numbers.size(); i++)
+        std::cout << numbers[i] << " ";
+    std::cout << "\n";  // OUTPUT: 1 2 3 4 5
 
-    for_each(list.begin(), list.end(), [](int &n) -> void { n = n * n;});
+    for (int x : numbers)
+        std::cout << x << " ";
+    std::cout << "\n";
 
-    cout << endl;
-    for (int i : list)
-    {
-        cout << i << endl;
-    }
-    cout << endl;
+    std::vector<char> alphabets;
+    alphabets.push_back('a');
+    alphabets.push_back('b');
+    alphabets.push_back('c');
 
-    cout << list.capacity() << endl;
+    std::cout << alphabets[1] << "\n";  // OUTPUT: b
 
-    list.push_back(4);
-    list.push_back(5);
-    cout << list.capacity() << endl;
+    for (auto ch : alphabets)
+        std::cout << ch << " ";
+    std::cout << "\n";
 
-    cout << endl;
-    for (int i : list)
-    {
-        cout << i << endl;
-    }
-    cout << endl;
+    for (auto i : {1, 2, 3})
+        std::cout << i << " ";
 
-    list.pop_back();
-    list.pop_back();
-    cout << list.capacity() << endl;
-
-    cout << endl;
-    for (int i : list)
-    {
-        cout << i << endl;
-    }
-    cout << endl;
-
-    cout << "Vector Vector" << endl;
-
-    vector<vector<int>> vectInt;
-    vectInt.push_back(list);
-
-    cout << vectInt[0][1] << endl;
-
-    for (int i : vectInt[0])
-    {
-        cout << i << " ";
-    }
-    cout << endl;
-
-    vector<int> list2;
-    list2.push_back(100);
-    list2.push_back(200);
-    list2.push_back(300);
-    vectInt.push_back(list2);
-
-    for (auto v : vectInt)
-    {
-        for (int i : v)
-        {
-            cout << i << ", ";
-        }
-        cout << endl;
-    }
+    int arr[] = {4, 5, 6};
+    for (auto j : arr)
+        std::cout << j << " ";
 
     return 0;
 }
