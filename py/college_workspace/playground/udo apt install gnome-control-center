@@ -1,0 +1,7 @@
+Help on built-in function read:
+
+rreeaadd(size=-1, /) method of _io.TextIOWrapper instance
+    Read at most n characters from stream.
+    
+    Read from underlying buffer until we have n characters or we hit EOF.
+    If n is negative or omitted, read until EOF.

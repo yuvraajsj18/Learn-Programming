@@ -1,0 +1,63 @@
+# 13.18
+
+    A. No.
+
+    B. No.
+
+    C. Yes. 
+
+-----------------------------------------
+
+# 13.19
+
+    Index our of bound
+
+-----------------------------------------
+
+# 13.20
+
+    Divided by zero!
+
+-----------------------------------------
+
+# 13.21
+
+    Index out of bound
+
+-----------------------------------------
+
+# 13.22
+
+    A. No
+
+    B. Both statement 4 and 5 will execute
+
+-----------------------------------------
+
+# 13.25
+
+    Done
+    Nothing is wrong
+    Finally we are here
+    Continue
+
+-----------------------------------------
+
+# 13.26
+
+    Index out of bound
+    Finally we are here
+    Continue
+
+-----------------------------------------
+
+# 13.27
+
+    The super class ArithmeticError's Exception is caught before
+    it's subclass ZeroDivisionError's Exception therefore always therefore
+    first except block will execute in case of ArithmeticError 
+    even when a ZeroDivisionError occurs.
+
+    --> The order should be other way around.
+
+-----------------------------------------
