@@ -1,11 +1,11 @@
 from functools import wraps
 
-has_logined = False
+has_loggedin = False
 
 def login_required(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        if has_logined:
+        if has_loggedin:
             return func(*args, **kwargs)
         else:
             login()
@@ -14,12 +14,12 @@ def login_required(func):
     return wrapper
 
 def login():
-    global has_logined
+    global has_loggedin
     username = input("Enter username: ")
     password = input("Enter password: ")
     if password == "stupid":
-        has_logined = True
-        print("Loggined")
+        has_loggedin = True
+        print("Logged in")
     else:
         print("Incorrect password")
 
