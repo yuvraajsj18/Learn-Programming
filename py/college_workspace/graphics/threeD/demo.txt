@@ -1,0 +1,2 @@
+from vpython import *
+box(size =vector (7,4,5), color = color.green, opacity = 0.25,axis=(1,2,3))

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 def plot_histogram(data):
     # plt.hist(data)
-    plt.hist(data,bins = [i-0.5 for i in range(1,max(data)+2)])
+    # plt.hist(data,bins = [i-0.5 for i in range(1,max(data)+2)])
     plt.xlabel('Value')
     plt.ylabel('Frequency')
     plt.title('Histogram')
