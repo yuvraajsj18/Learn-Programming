@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+
+/* Custom CSS here */
+body {
+    @apply font-arial;
+}
+
+@tailwind utilities;
