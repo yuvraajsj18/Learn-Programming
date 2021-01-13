@@ -6,4 +6,8 @@ body {
     @apply font-arial;
 }
 
+.search-btns {
+    @apply bg-gray-100 outline-none hover:bg-gray-300 font-arial px-3 py-2 rounded text-gray-800 text-sm;
+}
+
 @tailwind utilities;
