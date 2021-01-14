@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         arial: ['arial', 'sans-serif'],
       },
+      colors: {
+        googleGray: '#f2f2f2',
+      },
     },
   },
   variants: {
