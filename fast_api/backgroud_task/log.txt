@@ -1,0 +1,1 @@
+notification for user@example.com: some notification
